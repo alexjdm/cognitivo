@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+	<url>
+		<loc>http://cognitivo.cl/</loc>
+		<lastmod>2017-04-29T19:00:30+00:00</lastmod>
+	</url>
+	<url>
+		<loc>http://cognitivo.cl/ados/</loc>
+		<lastmod>2017-04-29T18:57:40+00:00</lastmod>
+	</url>
+	<url>
+		<loc>http://cognitivo.cl/blog/</loc>
+		<lastmod>2016-02-06T18:59:38+00:00</lastmod>
+	</url>
+	<url>
+		<loc>http://cognitivo.cl/blog/fenomeno-causa-efecto-bebe.html</loc>
+		<lastmod>2016-02-06T18:59:39+00:00</lastmod>
+	</url>
+	<url>
+		<loc>http://cognitivo.cl/blog/index.html</loc>
+		<lastmod>2016-02-06T18:59:38+00:00</lastmod>
+	</url>
+	<url>
+		<loc>http://cognitivo.cl/blog/cuanto-tiempo-uso-chupete.html</loc>
+		<lastmod>2016-02-06T18:59:38+00:00</lastmod>
+	</url>
+</urlset>
