@@ -1,0 +1,14 @@
+RewriteEngine on
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
+RewriteRule ^index\.html$ http://cognitivo.cl/ [R=301,L]
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+RewriteRule ^index\.php$ http://cognitivo.cl/ [R=301,L] 
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
+RewriteRule ^index\.html$ http://cognitivo.cl/ados2/ [R=301,L]
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+RewriteRule ^index\.php$ http://cognitivo.cl/ados2/ [R=301,L] 
+
+RewriteCond %{HTTP_HOST} ^cognitivo.cl [NC]
+RewriteRule ^(.*)$ http://www.cognitivo.cl/$1 [L,R=301]
+
+ErrorDocument 404 /404.html
