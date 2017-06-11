@@ -1,12 +1,12 @@
 <application>
   <component name="PhpInterpreters">
     <interpreters>
-      <interpreter home="C:\xampp\php\php.exe" id="014cca6b-2b4f-4aae-82b8-73377eac4d7b" name="PHP" debugger_id="php.debugger.XDebug" />
+      <interpreter home="C:\xampp\php\php.exe" id="014cca6b-2b4f-4aae-82b8-73377eac4d7b" name="PHP from XAMPP" debugger_id="php.debugger.XDebug" />
     </interpreters>
   </component>
   <component name="PhpInterpretersPhpInfoCache">
     <phpInfoCache>
-      <interpreter name="PHP">
+      <interpreter name="PHP from XAMPP">
         <phpinfo binary_type="PHP" php_cgi="C:\xampp\php\php-cgi.exe" php_cli="C:\xampp\php\php.exe" path_separator=";" version="5.6.30">
           <additional_php_ini />
           <configuration_file>C:\xampp\php\php.ini</configuration_file>
