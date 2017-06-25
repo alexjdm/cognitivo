@@ -67,14 +67,32 @@ require_once('../includes/base.php');
 
 		<!-- ========== MENU END ========== -->
 
+
+
+
 		<!-- ========== HEADER START ========== -->
 
-		<header class="background background3 background-image">
+		<header class="background ados-image background-purple">
 			<div class="container">
-				<div class="row text-center no-fade">
-					<div class="col-sm-12">
-						<h1>Evaluación Clínica ADOS-2</h1>
-					</div>
+				<div class="row no-fade" style="padding: 75px 0;">
+                    <div class="col-sm-7">
+                        <h1 style="font-family: Bariol, Helvetica; margin: 10px 0; font-size:48px; color: #e75d5d">¿Cómo saber si mi hijo tiene algún transtorno del espectro autista?</h1>
+                        <h3 style="font-family: Bariol, Helvetica; margin-top: 5px; font-size:20px; color: #e75d5d">En Cognitivo realizamos la evaluación ADOS - 2 que permite resolver esta duda.</h3>
+
+                        <div class="form-new" style="margin: 20px;">
+                            <div class="col-md-12"><p style="color: #e75d5d;">Deseo que me contacten para realizar una reserva.</p></div>
+                            <form id="contactForm" method="post" class="form-horizontal">
+                                <div class="col-md-9">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa tu correo" style="display:inline; width:90%;"/>
+                                    <div id="messages"></div>
+                                </div>
+                                <div class="col-md-3">
+                                    <button type="submit" class="btn btn-primary" id="myButtonSend" style="float: left;">Enviar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">&nbsp;</div>
 				</div>
 			</div>
 		</header>
@@ -87,79 +105,36 @@ require_once('../includes/base.php');
 			<div class="container">
 				<div class="row no-fade">
 
+                    <div class="col-sm-4 txt-center">
+                        <a target="_blank" href="https://goo.gl/maps/8VaVFkhMHDK2"><i class="fa fa-3x fa-map-marker" aria-hidden="true"></i></a>
+                        <h3>¿Dónde?</h3>
+                        <p>En nuestro centro ubicado en Canela Alta 2803, Puente Alto.</p>
+                    </div>
+                    <div class="col-sm-4 txt-center">
+                        <i class="fa fa-3x fa-clock-o" aria-hidden="true" style="color: #e03131;"></i>
+                        <h3>Horarios</h3>
+                        <p>Sábados de 10 a 13 hrs.</p>
+                    </div>
+                    <div class="col-sm-4 txt-center">
+                        <i class="fa fa-3x fa-money" aria-hidden="true" style="color: #e03131;"></i>
+                        <h3 >Valores</h3>
+                        <p>Tres sesiones de $30.000 cada una.</p>
+                    </div>
+                </div>
+                <div class="row no-fade" style="margin-top:40px;">
 					<!-- Post Start -->
-					<div class="col-sm-8">
-					<article class="post">
-						<h1 class="entry-title">Escala de Observación para el Diagnóstico del Autismo</h1>
+					<div class="col-sm-12">
+                        <article class="post">
+                            <h1 class="entry-title">Escala de Observación para el Diagnóstico del Autismo</h1>
 
-						<div class="entry-content">
-							<p style="text-align: justify">La <strong>Escala de Observación para el Diagnóstico del Autismo - 2 (ADOS-2)</strong> permite la evaluación estandarizada y semiestructurada de la comunicación, la interacción social, el juego o el uso imaginativo de los materiales y las conductas restrictivas y repetitivas en niños, jóvenes y adultos en los que se sospecha que existe un <strong>trastorno del espectro autista</strong> (TEA). Su predecesor, el ADOS, es considerado un instrumento de referencia para la evaluación observacional y el diagnóstico del TEA</p>
-							<p style="text-align: justify">El ADOS-2 está compuesto por <strong>cinco módulos</strong>, que permiten evaluar desde <strong>niños de 12 meses hasta adultos</strong>. Cada módulo ofrece distintas actividades estandarizadas diseñadas para provocar comportamientos que están directamente relacionados con el diagnóstico de los trastornos del espectro autista en distintos niveles de desarrollo y edades cronológicas. Los <strong>protocolos</strong> guían al examinador en la aplicación de las actividades, la codificación de las conductas observadas y la puntuación de los algoritmos.</p>
-						</div>
-					</article>
-					<!-- Post End -->
+                            <div class="entry-content">
+                                <p style="text-align: justify">La <strong>Escala de Observación para el Diagnóstico del Autismo - 2 (ADOS-2)</strong> permite la evaluación estandarizada y semiestructurada de la comunicación, la interacción social, el juego o el uso imaginativo de los materiales y las conductas restrictivas y repetitivas en niños, jóvenes y adultos en los que se sospecha que existe un <strong>trastorno del espectro autista</strong> (TEA). Su predecesor, el ADOS, es considerado un instrumento de referencia para la evaluación observacional y el diagnóstico del TEA</p>
+                                <p style="text-align: justify">El ADOS-2 está compuesto por <strong>cinco módulos</strong>, que permiten evaluar desde <strong>niños de 12 meses hasta adultos</strong>. Cada módulo ofrece distintas actividades estandarizadas diseñadas para provocar comportamientos que están directamente relacionados con el diagnóstico de los trastornos del espectro autista en distintos niveles de desarrollo y edades cronológicas. Los <strong>protocolos</strong> guían al examinador en la aplicación de las actividades, la codificación de las conductas observadas y la puntuación de los algoritmos.</p>
+                            </div>
+                        </article>
+                        <!-- Post End -->
 
 					</div>
-					<!-- Posts End -->
-
-					<!-- Sidebar Start -->
-					<aside class="col-sm-4">
-						<h5><i class="fa fa-file-text fa-lg"></i>Horas</h5>
-						<ul class="submenu">							
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="buttonReservar">Reservar</button>
-
-							<div class="post-thumb" style="margin-top: 20px;">
-								<img src="../images/examen-ados-2.jpg" alt="Examen ADOS-2" title="Test ADOS-2" class="img-responsive" />
-							</div>
-
-							<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-							  <div class="modal-dialog" role="document">
-								<div class="modal-content">
-									<form id="contactForm" method="post" class="form-horizontal">
-										<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-											<h4 class="modal-title" id="exampleModalLabel">Reserva</h4>
-										</div>
-								  		<div class="modal-body">
-											<p>Deseo que me contacten para realizar una reserva.</p>
-
-											<div class="form-group">
-												<label class="col-md-3 control-label">Nombre</label>
-												<div class="col-md-6">
-													<input type="text" class="form-control" id="fullName" name="fullName" />
-												</div>
-											</div>
-											<div class="form-group">
-												<label class="col-md-3 control-label">Email</label>
-												<div class="col-md-6">
-													<input type="email" class="form-control" id="email" name="email" />
-												</div>
-											</div>
-											<div class="form-group">
-												<label class="col-md-3 control-label">Teléfono</label>
-												<div class="col-md-6">
-													<input type="text" class="form-control" id="telefono" name="telefono" />
-												</div>
-											</div>
-											<!-- #messages is where the messages are placed inside -->
-											<div class="form-group">
-												<div class="col-md-9 col-md-offset-3">
-													<div id="messages"></div>
-												</div>
-											</div>
-
-										</div>
-										<div class="modal-footer">
-											<button type="submit" class="btn btn-primary" id="myButtonSend">Enviar</button>
-										</div>
-									</form>
-								</div>
-							  </div>
-							</div>
-						</ul>
-						<hr>
-					</aside>
-					<!-- Sidebar End -->
 
 				</div>
 			</div>
@@ -174,7 +149,7 @@ require_once('../includes/base.php');
 		<!-- ========== FOOTER END ========== -->
 
 		<!-- Modernizr Plugin -->
-		<script src="../js/modernizr.custom.97074.js"></script>
+		<!--<script src="../js/modernizr.custom.97074.js"></script> -->
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="../js/jquery-1.10.2.min.js"></script>
@@ -206,15 +181,6 @@ require_once('../includes/base.php');
 		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"></script>
 		
 		<script>
-			$('#exampleModal').on('show.bs.modal', function (event) {
-			  var button = $(event.relatedTarget) // Button that triggered the modal
-			  //var recipient = button.data('whatever') // Extract info from data-* attributes
-			  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-			  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-			  var modal = $(this)
-			  //modal.find('.modal-title').text('New message to ' + recipient)
-			  //modal.find('.modal-body input').val(recipient)
-			})	
 			
 			$(document).ready(function() {
 				$('#contactForm').bootstrapValidator({
@@ -277,9 +243,7 @@ require_once('../includes/base.php');
 						});
 					});
 			});
-			function closeModal() {
-				$('#exampleModal').modal('hide');
-			}
+
 		</script>
 
 		<meta itemprop="url" content="http://www.cognitivo.cl/"></span>
