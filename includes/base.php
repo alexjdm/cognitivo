@@ -68,7 +68,7 @@ function getNavBar2 () {
 				</div>
 				<div class=\"navbar-collapse collapse\">
 					<ul class=\"nav navbar-nav navbar-right\">
-						<li><a href=\"../index.php#home\">INICIO</a></li>
+						<li><a href=\"../index.php\">INICIO</a></li>
 						<li class=\"dropdown\">
 							<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">CENTRO <b class=\"caret\"></b></a>
 							<ul class=\"dropdown-menu\">
