@@ -18,7 +18,7 @@ function getNavBar () {
 						<span class=\"icon-bar\"></span>
 						<span class=\"icon-bar\"></span>
 					</button>
-					<meta itemprop=\"image\" content=\"http://www.cognitivo.cl/\"><img src=\"images/logo-cognitivo.png\" alt=\"Logo Cognitivo\" title=\"Cognitivo\" class=\"img-responsive\"/></a>
+					<meta itemprop=\"image\" content=\"http://www.cognitivo.cl/\"><img src=\"images/logo-cognitivo.png\" alt=\"Logo Cognitivo\" title=\"Cognitivo\" class=\"img-responsive logo-cognitivo\"/></a>
 				</div>
 				<div class=\"navbar-collapse collapse\">
 					<ul class=\"nav navbar-nav navbar-right\">
@@ -64,7 +64,7 @@ function getNavBar2 () {
 						<span class=\"icon-bar\"></span>
 						<span class=\"icon-bar\"></span>
 					</button>
-					<meta itemprop=\"image\" content=\"http://www.cognitivo.cl/\"><img src=\"../images/logo-cognitivo.png\" alt=\"Logo Cognitivo\" title=\"Cognitivo\" class=\"img-responsive\"/></a>
+					<meta itemprop=\"image\" content=\"http://www.cognitivo.cl/\"><img src=\"../images/logo-cognitivo.png\" alt=\"Logo Cognitivo\" title=\"Cognitivo\" class=\"img-responsive  logo-cognitivo\"/></a>
 				</div>
 				<div class=\"navbar-collapse collapse\">
 					<ul class=\"nav navbar-nav navbar-right\">

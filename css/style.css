@@ -170,6 +170,14 @@ footer .row {
     background-repeat: repeat-x;
 }
 
+.ados-banner{
+    padding: 75px 0;
+}
+
+.logo-cognitivo{
+    margin-top: 15px;
+}
+
 #messages {
     color: #888;
 }
@@ -554,6 +562,14 @@ footer li {
 
     .non-display-responsive{
         display: none;
+    }
+
+    .ados-image {
+        background: #f8f8f8;
+    }
+
+    .ados-banner{
+        padding: 45px 0;
     }
 }
 

@@ -74,7 +74,7 @@ require_once('../includes/base.php');
 
 		<header class="background ados-image background-purple">
 			<div class="container">
-				<div class="row no-fade" style="padding: 75px 0;">
+				<div class="row no-fade ados-banner">
                     <div class="col-sm-7">
                         <h1 style="font-family: Bariol, Helvetica; margin: 10px 0; font-size:48px; color: #e75d5d">¿Cómo saber si mi hijo tiene algún transtorno del espectro autista?</h1>
                         <h3 style="font-family: Bariol, Helvetica; margin-top: 5px; font-size:20px; color: #e75d5d">En Cognitivo realizamos la evaluación ADOS - 2 que permite resolver esta duda.</h3>
@@ -82,11 +82,11 @@ require_once('../includes/base.php');
                         <div class="form-new" style="margin: 20px;">
                             <div class="col-md-12"><p style="color: #e75d5d;">Deseo que me contacten para realizar una reserva.</p></div>
                             <form id="contactForm" method="post" class="form-horizontal">
-                                <div class="col-md-9">
+                                <div class="col-md-9 col-xs-9">
                                     <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa tu correo" style="display:inline; width:90%;"/>
                                     <div id="messages"></div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-3 col-xs-3">
                                     <button type="submit" class="btn btn-primary" id="myButtonSend" style="float: left;">Enviar</button>
                                 </div>
                             </form>
