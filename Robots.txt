@@ -1,5 +1,0 @@
-User-Agent: *
-Disallow: 
-Disallow: /index.php
-
-Sitemap: http://www.cognitivo.cl/sitemap.xml
