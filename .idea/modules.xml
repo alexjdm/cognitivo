@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/andreaojeda.iml" filepath="$PROJECT_DIR$/.idea/andreaojeda.iml" />
+      <module fileurl="file://C:\xampp\htdocs\cognitivo\.idea\andreaojeda.iml" filepath="C:\xampp\htdocs\cognitivo\.idea\andreaojeda.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/cognitivo.iml" filepath="$PROJECT_DIR$/.idea/cognitivo.iml" />
     </modules>
   </component>
 </project>

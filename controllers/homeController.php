@@ -1,0 +1,331 @@
+<?php
+
+include_once('lib/khipu/khipu-lib.php');
+require_once ('connections/db.php');
+require_once ('helpers/CommonHelper.php');
+
+class homeController {
+
+    public $pageTitle = "Cognitivo Centro de Terapias";
+    public $pageDescription = "Centro de terapia especialista en Autismo. Contamos con especialidades en Fonoaudiología, Terapia Ocupacional, Psicología y Psicopedagogía.";
+    public $page = 'views/home/index.php';
+    public $navbar = 'navbar.php';
+    public $navbarfooter = 'navbar-footer.php';
+
+    public function index() {
+        $this->pageTitle = "Cognitivo Centro de Terapias";
+        $this->pageDescription = "Centro de terapia especialista en Autismo. Contamos con especialidades en Fonoaudiología, Terapia Ocupacional, Psicología y Psicopedagogía.";
+        $this->page = 'views/home/index.php';
+        $this->navbar = 'navbar.php';
+        $this->navbarfooter = 'navbar-footer.php';
+        $this->pageKeywords = 'centro de autismo, TEA, Fonoaudiología,Psicología,Psicopedagogía,centro de Terapia Ocupacional, centro de Terapia Ocupacional para niños';
+
+        require_once( 'views/layout.php' );
+    }
+
+    public function ados() {
+        $this->pageTitle = 'ADOS 2 | Cognitivo';
+        $this->pageDescription = "Certificación en Evaluación Clínica ADOS-2 para el diagnóstico de Autismo.";
+        $this->pageKeywords = "ADOS-2,Examen ADOS-2,Evaluación Clínica ADOS-2,Test ADOS-2, Autismo, TEA";
+        $this->page = 'views/home/ados.php';
+        $this->navbar = 'navbar-interior.php';
+        $this->navbarfooter = 'navbar-footer.php';
+
+        require_once('views/layout.php');
+    }
+
+    public function equipo() {
+        $this->pageTitle = 'Equipo | Cognitivo';
+        $this->pageDescription = "Equipo interdisciplinario especialista en Autismo.";
+        $this->pageKeywords = "Equipo interdisciplinario, Autismo, TEA";
+        $this->page = 'views/home/equipo.php';
+        $this->navbar = 'navbar-interior.php';
+        $this->navbarfooter = 'navbar-footer.php';
+
+        require_once('views/layout.php');
+    }
+
+    public function condicionesplanes() {
+        $this->pageTitle = 'Condiciones Planes | Cognitivo';
+        $this->pageDescription = "Planes integrales para niños con TEA.";
+        $this->pageKeywords = "Plan, programa, Autismo, TEA";
+        $this->page = 'views/home/condiciones-planes.php';
+        $this->navbar = 'navbar-interior.php';
+        $this->navbarfooter = 'navbar-footer.php';
+
+        require_once('views/layout.php');
+    }
+
+    public function cursoteamanejoconductascomplejas() {
+        $this->pageTitle = 'TEA y Manejo de conductas complejas | Cognitivo';
+        $this->pageDescription = "Equipo interdisciplinario especialista en Autismo.";
+        $this->pageKeywords = "Equipo interdisciplinario, Autismo, TEA";
+        $this->page = 'views/home/curso-tea-manejo-conductas-complejas.php';
+        $this->navbar = 'navbar-interior.php';
+        $this->navbarfooter = 'navbar-footer.php';
+
+        require_once('views/layout.php');
+    }
+
+    public function cursoteamanejoconductascomplejasprocess() {
+        $this->pageTitle = 'TEA y Manejo de conductas complejas | Cognitivo';
+        $this->pageDescription = "Equipo interdisciplinario especialista en Autismo.";
+        $this->pageKeywords = "Equipo interdisciplinario, Autismo, TEA";
+        $this->page = 'views/home/curso-tea-manejo-conductas-complejas-process.php';
+        $this->navbar = 'navbar-interior.php';
+        $this->navbarfooter = 'navbar-footer.php';
+
+        $name		= sanear_string($_POST['name']);
+        $rut		= $_POST['rut'];
+        $email 		= $_POST['email'];
+        $phone 		= $_POST['phone'];
+        $comuna 	= $_POST['comuna'];
+        $id_transaccion 	= rand(10000, 99999);
+        $bankId 	= $_POST['bankId'];
+        $nombreBanco 	= $_POST['nombreBanco'];
+        $ocupacion = "";
+        $carrera = "";
+
+        $precio		= 10000;
+        $idCurso	= 3;
+
+        if (!filter_var($_REQUEST['email'], FILTER_VALIDATE_EMAIL)) {
+            header('Location: index.php?invalid=true');
+            return;
+        }
+
+        date_default_timezone_set("America/Santiago");
+
+
+        if (!defined("PHP_EOL")) define("PHP_EOL", "\r\n");
+
+        $pdo = Database::connect();
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        $sql = $pdo->prepare('INSERT INTO `inscritos`(`name`, `rut`, `email`, `phone`, `COMUNA`, `ocupacion`, `carrera`, `pagado`, `banco`, `precio`, `fecha`, `llamado`, `comentario`, `id_transaccion`, `ID_CURSO`) VALUES ("'.$name.'", "'.$rut.'", "'.$email.'", "'.$phone.'", "'.$comuna.'", "'.$ocupacion.'", "'.$carrera.'", "0", "'.$_REQUEST['nombreBanco'].'", "'.$precio.'", now(), "0", "", "'.$id_transaccion.'", "'.$idCurso.'")');
+        $sql->execute();
+
+        $json = khipu_get_new_payment($_REQUEST['email'], $_REQUEST['bankId'], $precio, $id_transaccion);
+        $data = urlencode($json);
+
+        require_once('views/layout.php');
+    }
+
+    public function cursoteamanejoconductascomplejasfinish() {
+        $this->pageTitle = 'TEA y Manejo de conductas complejas | Cognitivo';
+        $this->pageDescription = "Equipo interdisciplinario especialista en Autismo.";
+        $this->pageKeywords = "Equipo interdisciplinario, Autismo, TEA";
+        $this->page = 'views/home/curso-tea-manejo-conductas-complejas-finish.php';
+        $this->navbar = 'navbar-interior.php';
+        $this->navbarfooter = 'navbar-footer.php';
+
+        require_once('views/layout.php');
+    }
+
+    public function cursoteamanejoconductascomplejasnotifyjs() {
+        $my_receiver_id = 55616;
+        //$my_receiver_id = 169939; // Modo desarrollador
+
+        // Leer los parametros enviados por khipu
+        $api_version = $_POST['api_version'];
+        $receiver_id = $_POST['receiver_id'];
+        $notification_id = $_POST['notification_id'];
+        $subject = $_POST['subject'];
+        $amount = $_POST['amount'];
+        $currency = $_POST['currency'];
+        $custom = $_POST['custom'];
+        $transaction_id = $_POST['transaction_id'];
+        $payer_email = $_POST['payer_email'];
+        $notification_signature = $_POST['notification_signature'];
+
+        // Creamos el string para enviar
+        $to_send = 'api_version=' . urlencode($api_version) .
+            '&receiver_id=' . urlencode($receiver_id) .
+            '&notification_id=' . urlencode($notification_id) .
+            '&subject=' . urlencode($subject) .
+            '&amount=' . urlencode($amount) .
+            '&currency=' . urlencode($currency) .
+            '&transaction_id=' . urlencode($transaction_id) .
+            '&payer_email=' . urlencode($payer_email) .
+            '&custom=' . urlencode($custom);
+
+        $ch = curl_init("https://khipu.com/api/1.2/verifyPaymentNotification");
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $to_send . "&notification_signature=" . urlencode($notification_signature));
+        $response = curl_exec($ch);
+        curl_close($ch);
+
+        $line = "Validacion remota [Message: $to_send, Signature: $notification_signature, Valid: $response]\n";
+
+        $myFile = 'curso-tea-manejo-conductas-complejas-khipu-js.log';
+        $fh = fopen($myFile,'a') or die("can't open file");
+        fwrite($fh, print_r($_REQUEST, true));
+        fwrite($fh, $line);
+
+        if ($transaction_id == 'demo-js-transaction-1' && $response == 'VERIFIED' && $receiver_id == $my_receiver_id) {
+            $headers = 'From: "Curso.php Cognitivo" <no-responder@khipu.com>' . "\r\n";
+            $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+            $subject = 'Pago exitoso Curso.php Cognitivo';
+            $body = <<<EOF
+Hola<br/>
+<br/>
+<p>
+Recibes este correo pues el pago fue conciliado por Khipu.
+</p>
+<br><br>Atentamente,<br>Equipo Cognitivo<br><img src='dist/images/logo-hor.png'>
+EOF;
+            mail($custom, $subject, $body, $headers);
+            fwrite($fh, "Enviado $subject a $custom");
+        }
+        fclose($fh);
+
+    }
+
+
+
+
+    public function cursodificultadessensorialesredsensorial() {
+        $this->pageTitle = 'Dificultades Sensoriales | Cognitivo';
+        $this->pageDescription = "Equipo interdisciplinario especialista en Autismo.";
+        $this->pageKeywords = "Equipo interdisciplinario, Autismo, TEA";
+        $this->page = 'views/home/curso-dificultades-sensoriales-red-sensorial.php';
+        $this->navbar = 'navbar-interior.php';
+        $this->navbarfooter = 'navbar-footer.php';
+
+        require_once('views/layout.php');
+    }
+
+    public function cursodificultadessensorialesredsensorialprocess() {
+        $this->pageTitle = 'Dificultades Sensoriales | Cognitivo';
+        $this->pageDescription = "Equipo interdisciplinario especialista en Autismo.";
+        $this->pageKeywords = "Equipo interdisciplinario, Autismo, TEA";
+        $this->page = 'views/home/curso-dificultades-sensoriales-red-sensorial-process.php';
+        $this->navbar = 'navbar-interior.php';
+        $this->navbarfooter = 'navbar-footer.php';
+
+        $name		= sanear_string($_POST['name']);
+        $rut		= $_POST['rut'];
+        $email 		= $_POST['email'];
+        $phone 		= $_POST['phone'];
+        $comuna 	= $_POST['comuna'];
+        $ocupacion 	= $_POST['ocupacion'];
+        $carrera 	= $_POST['carrera'];
+        $id_transaccion 	= rand(10000, 99999);
+        $bankId 	= $_POST['bankId'];
+        $nombreBanco 	= $_POST['nombreBanco'];
+
+        $precio		= 80000;
+        if($ocupacion == 2){
+            $precio	= 60000;
+        }
+        $idCurso	= 4;
+
+        if (!filter_var($_REQUEST['email'], FILTER_VALIDATE_EMAIL)) {
+            header('Location: index.php?invalid=true');
+            return;
+        }
+
+        date_default_timezone_set("America/Santiago");
+
+
+        if (!defined("PHP_EOL")) define("PHP_EOL", "\r\n");
+
+        $pdo = Database::connect();
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        $sql = $pdo->prepare('INSERT INTO `inscritos`(`name`, `rut`, `email`, `phone`, `COMUNA`, `ocupacion`, `carrera`, `pagado`, `banco`, `precio`, `fecha`, `llamado`, `comentario`, `id_transaccion`, `ID_CURSO`) VALUES ("'.$name.'", "'.$rut.'", "'.$email.'", "'.$phone.'", "'.$comuna.'", "'.$ocupacion.'", "'.$carrera.'", "0", "'.$_REQUEST['nombreBanco'].'", "'.$precio.'", now(), "0", "", "'.$id_transaccion.'", "'.$idCurso.'")');
+        $sql->execute();
+
+        $json = khipu_get_new_payment($_REQUEST['email'], $_REQUEST['bankId'], $precio, $id_transaccion);
+        $data = urlencode($json);
+
+        require_once('views/layout.php');
+    }
+
+    public function cursodificultadessensorialesredsensorialfinish() {
+        $this->pageTitle = 'Dificultades Sensoriales | Cognitivo';
+        $this->pageDescription = "Equipo interdisciplinario especialista en Autismo.";
+        $this->pageKeywords = "Equipo interdisciplinario, Autismo, TEA";
+        $this->page = 'views/home/curso-dificultades-sensoriales-red-sensorial-finish.php';
+        $this->navbar = 'navbar-interior.php';
+        $this->navbarfooter = 'navbar-footer.php';
+
+        require_once('views/layout.php');
+    }
+
+    public function cursodificultadessensorialesredsensorialnotifyjs() {
+        $my_receiver_id = 55616;
+        //$my_receiver_id = 169939; // Modo desarrollador
+
+        // Leer los parametros enviados por khipu
+        $api_version = $_POST['api_version'];
+        $receiver_id = $_POST['receiver_id'];
+        $notification_id = $_POST['notification_id'];
+        $subject = $_POST['subject'];
+        $amount = $_POST['amount'];
+        $currency = $_POST['currency'];
+        $custom = $_POST['custom'];
+        $transaction_id = $_POST['transaction_id'];
+        $payer_email = $_POST['payer_email'];
+        $notification_signature = $_POST['notification_signature'];
+
+        // Creamos el string para enviar
+        $to_send = 'api_version=' . urlencode($api_version) .
+            '&receiver_id=' . urlencode($receiver_id) .
+            '&notification_id=' . urlencode($notification_id) .
+            '&subject=' . urlencode($subject) .
+            '&amount=' . urlencode($amount) .
+            '&currency=' . urlencode($currency) .
+            '&transaction_id=' . urlencode($transaction_id) .
+            '&payer_email=' . urlencode($payer_email) .
+            '&custom=' . urlencode($custom);
+
+        $ch = curl_init("https://khipu.com/api/1.2/verifyPaymentNotification");
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $to_send . "&notification_signature=" . urlencode($notification_signature));
+        $response = curl_exec($ch);
+        curl_close($ch);
+
+        $line = "Validacion remota [Message: $to_send, Signature: $notification_signature, Valid: $response]\n";
+
+        $myFile = 'curso-dificultades-sensoriales-red-sensorial-khipu-js.log';
+        $fh = fopen($myFile,'a') or die("can't open file");
+        fwrite($fh, print_r($_REQUEST, true));
+        fwrite($fh, $line);
+
+        if ($transaction_id == 'demo-js-transaction-1' && $response == 'VERIFIED' && $receiver_id == $my_receiver_id) {
+            $headers = 'From: "Curso.php Cognitivo" <no-responder@khipu.com>' . "\r\n";
+            $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+            $subject = 'Pago exitoso Curso.php Cognitivo';
+            $body = <<<EOF
+Hola<br/>
+<br/>
+<p>
+Recibes este correo pues el pago fue conciliado por Khipu.
+</p>
+<br><br>Atentamente,<br>Equipo Cognitivo<br><img src='dist/images/logo-hor.png'>
+EOF;
+            mail($custom, $subject, $body, $headers);
+            fwrite($fh, "Enviado $subject a $custom");
+        }
+        fclose($fh);
+
+    }
+
+
+
+    public function error() {
+        $this->pageTitle = 'Error | Cognitivo';
+        $this->pageDescription = "Cognitvo centre de terapias especialista en TEA.";
+        $this->pageKeywords = 'TEA, autismo, terapias';
+        $this->page = 'views/error/error.php';
+        $this->navbar = 'navbar.php';
+        $this->navbarfooter = 'navbar-footer.php';
+        
+        require_once('views/layout.php');
+    }
+}

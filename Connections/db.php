@@ -3,8 +3,8 @@ class Database
 {
     private static $dbName = 'cognitiv_app';
     private static $dbHost = 'localhost';
-    private static $dbUsername = 'cognitiv_admin';
-    private static $dbUserPassword = ']g8SX#RWByKy';
+    private static $dbUsername = 'root';
+    private static $dbUserPassword = '';
 
     private static $cont = null;
 
