@@ -15,35 +15,66 @@
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <!--<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
-            <!--<li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>-->
         </ol>
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
+
             <div class="item active">
                 <div class="col-md-7 col-sm-7 col-xs-12 divizq-curso1">
-                    <h4 class="tituloBannerH4">Nuevo curso para padres:</h4>
-                    <h1 class="tituloBannerH1">TEA y Manejo de</h1>
-                    <h1 class="tituloBannerH1">conductas complejas</h1>
-                    <a class="btn btn-primary btnInscribir-curso1" href="curso-tea-manejo-conductas-complejas/">INSCRÍBETE</a>
+                    <h4 class="tituloBannerH4">Curso para Padres:</h4>
+                    <h1 class="tituloBannerH1" style="font-family: Dosis; font-size: 28pt;">INTEGRACIÓN SENSORIAL Y ALIMENTACIÓN</h1>
+                    <h4 class="tituloBannerH4" style="margin-top: 2%;">¡Cupos Limitados! No te lo pierdas</h4>
+                    <a class="btn btn-primary btnInscribir-curso1" href="curso-integracion-sensorial-alimentacion/">INSCRÍBETE</a>
 
                     <div class="col-md-12 curso1-horarios">
-                        <p style="display: inline"><img src="dist/images/calendar.png" width="20px"> 24 marzo</p>
+                        <p style="display: inline"><img src="dist/images/calendar.png" width="20px"> 12 mayo 2018</p>
                         <p style="display: inline"><img src="dist/images/time.png" width="20px"> 10 - 12 hrs.</p>
                     </div>
 
                 </div>
-                <div class="col-md-5 col-sm-5 col-xs-12 back-curso1">
-                    <h3 class="text-center" style="margin-top: 88%; margin-bottom: 13%; font-family: 'Open Sans', Helvetica, Arial, sans-serif; color: white; font-weight: bold;">CUPOS LIMITADOS</h3>
-                    <!--<h5 class="text-center" style="margin-top: 20px; font-family: 'Open Sans', Helvetica, Arial, sans-serif; color: white; font-weight: bold;">Cupos limitados</h5>-->
+                <div class="col-md-5 col-sm-5 col-xs-12 back-curso2 non-display-responsive">
+
+                    <!--<h3 class="text-center" style="margin-top: 80%; font-family: 'Open Sans', Helvetica, Arial, sans-serif; color: #b43131; font-weight: bold;">Organiza</h3>
+                    <h5 class="text-center" style="margin-top: 20px; font-family: 'Open Sans', Helvetica, Arial, sans-serif; color: white; font-weight: bold;">Cupos limitados</h5>-->
                 </div>
-                <!--<img src="dist/images/CursoPadres1.jpg" alt="Los Angeles">-->
+                <div class="col-md-5 col-sm-5 col-xs-12 display-responsive" style="background-color: #FFFFFF">
+                    <center>
+                        <h3>Organiza:</h3>
+                        <img src="dist/images/logo-hor.png" width="100px">
+                    </center>
+                </div>
             </div>
 
-            <div class="item">
+            <!--<div class="item active">
+                <div class="col-md-7 col-sm-7 col-xs-12 divizq-curso1">
+                    <h4 class="tituloBannerH4">Seminario Intensivo:</h4>
+                    <h1 class="tituloBannerH1" style="font-family: Dosis; font-size: 28pt;">AUTISMO Y PROBLEMAS DE ALIMENTACIÓN</h1>
+                    <h4 class="tituloBannerH4" style="margin-top: 2%;">¡Cupos Limitados! No te lo pierdas</h4>
+                    <a class="btn btn-primary btnInscribir-curso1" href="curso-dificultades-sensoriales-red-sensorial/">INSCRÍBETE</a>
+
+                    <div class="col-md-12 curso1-horarios">
+                        <p style="display: inline"><img src="dist/images/calendar.png" width="20px"> 20 y 21 de abril 2018</p>
+                        <p style="display: inline"><img src="dist/images/time.png" width="20px"> 9 - 17 hrs.</p>
+                    </div>
+
+                </div>
+                <div class="col-md-5 col-sm-5 col-xs-12 back-seminario1 non-display-responsive">
+                </div>
+                <div class="col-md-5 col-sm-5 col-xs-12 display-responsive" style="background-color: #FFFFFF">
+                    <center>
+                        <h3>Organizan:</h3>
+                        <img src="dist/images/logo-hor.png" width="100px">
+                        <img src="dist/images/UCEN_facsalud.jpg" width="100px">
+                    </center>
+                </div>
+            </div>-->
+
+            <!--<div class="item">
                 <div style="background-color: #b84242; height: 80vh;">
                     <div class="col-md-7 col-sm-7 col-xs-12 divizq-curso1">
                     <h4 class="tituloBannerH4">Nuevo curso para profesionales:</h4>
@@ -63,7 +94,7 @@
                 </div>
             </div>
 
-            <!--<div class="item">
+            <div class="item">
                 <img src="dist/images/bg1.png" alt="Chicago">
             </div>
 
@@ -72,7 +103,7 @@
             </div>-->
         </div>
 
-        <!-- Left and right controls -->
+        <!--
         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left"></span>
             <span class="sr-only">Previous</span>
@@ -81,6 +112,7 @@
             <span class="glyphicon glyphicon-chevron-right"></span>
             <span class="sr-only">Next</span>
         </a>
+        -->
     </div>
 
 

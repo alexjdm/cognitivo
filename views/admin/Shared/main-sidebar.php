@@ -36,6 +36,8 @@
 
             <li class="treeview <?php if($controller=='admin' && ($action=='cursos' || $action=='inscritos' || $action=='pagados')  ){ echo 'active'; } ?>"><a href="admin/cursos/"><i class="fa fa-university" aria-hidden="true"></i> <span>Cursos</span></a></li>
 
+            <li class="treeview <?php if($controller=='admin' && ($action=='cursos' || $action=='inscritos' || $action=='pagados')  ){ echo 'active'; } ?>"><a href="admin/enviarcorreomasivo/"><i class="fa fa-university" aria-hidden="true"></i> <span>Correo Masivo</span></a></li>
+
             <!--<li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>-->
         </ul><!-- /.sidebar-menu -->
     </section>

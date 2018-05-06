@@ -1,0 +1,30 @@
+Array
+(
+    [action] => curso-tea-manejo-conductas-complejas-notify-js
+)
+Validacion remota [Message: api_version=&receiver_id=&notification_id=&subject=&amount=&currency=&transaction_id=&payer_email=&custom=, Signature: , Valid: {
+  "error": {
+    "type": "invalid-request",
+    "message": "amount no puede estar vacío"
+  }
+}]
+Array
+(
+    [action] => curso-tea-manejo-conductas-complejas-notify-js
+)
+Validacion remota [Message: api_version=&receiver_id=&notification_id=&subject=&amount=&currency=&transaction_id=&payer_email=&custom=, Signature: , Valid: {
+  "error": {
+    "type": "invalid-request",
+    "message": "amount no puede estar vacío"
+  }
+}]
+Array
+(
+    [action] => curso-tea-manejo-conductas-complejas-notify-js
+)
+Validacion remota [Message: api_version=&receiver_id=&notification_id=&subject=&amount=&currency=&transaction_id=&payer_email=&custom=, Signature: , Valid: {
+  "error": {
+    "type": "invalid-request",
+    "message": "amount no puede estar vacío"
+  }
+}]

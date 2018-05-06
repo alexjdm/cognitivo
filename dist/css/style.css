@@ -2,6 +2,16 @@
     font-family: Bariol;
     src: url('../fonts/Bariol/Bariol_Regular.otf') format('opentype');
 }
+@font-face {
+    font-family: Dosis;
+    src: url('../fonts/Dosis/Dosis-Bold.otf') format('opentype'),
+    url('../fonts/Dosis/Dosis-ExtraBold.otf') format('opentype'),
+    url('../fonts/Dosis/Dosis-ExtraLight.otf') format('opentype'),
+    url('../fonts/Dosis/Dosis-Light.otf') format('opentype'),
+    url('../fonts/Dosis/Dosis-Medium.otf') format('opentype'),
+    url('../fonts/Dosis/Dosis-Regular.otf') format('opentype'),
+    url('../fonts/Dosis/Dosis-SemiBold.otf') format('opentype');
+}
 
 /* GLOBAL STYLES
 ==================================================================*/
@@ -11,6 +21,7 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6 {
+    font-family: Dosis, "Bariol Regular",Georgia, Times, 'Times New Roman';
 }
 
 h4,h5,h6 {
@@ -572,6 +583,10 @@ footer li {
         display: none;
     }
 
+    .display-responsive {
+        display: block !important;
+    }
+
     .ados-image {
         background: #f8f8f8;
     }
@@ -613,6 +628,22 @@ footer li {
     .back-curso1 {
         height: 100% !important;
     }
+
+    .back-seminario1 {
+        height: 100% !important;
+    }
+
+    #btnAnimado {
+        font-size: 8pt;
+    }
+
+    .img-principal-curso {
+        width: 100% !important;
+    }
+
+    #botonGoToInscripcion {
+        width: 100%;
+    }
 }
 
 .txt-center
@@ -638,7 +669,7 @@ footer li {
 }
 
 .tituloBannerH4 {
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-family: "Bariol Regular";
     color: white;
     font-size: 20pt;
     margin-left:20%;
@@ -660,6 +691,7 @@ footer li {
 
 .btnInscribir-curso1 {
     margin-left: 20%;
+    margin-top: 4%;
     margin-bottom: 5%;
     font-size: 20pt;
 }
@@ -668,4 +700,53 @@ footer li {
     color: white;
     margin-left: 18%;
     margin-bottom: 5%;
+}
+
+.back-seminario1 {
+    background-image: url('../images/imagen-seminario1.jpg');
+    background-color: #b84242;
+    background-repeat: round;
+    background-size: 100% auto;
+    height: 80vh;
+}
+
+.divizq-curso2 {
+    background-color: #e9e9e9;
+    height: 80vh;
+}
+
+.back-curso2 {
+    background-image: url('../images/imagen-curso2.jpg');
+    background-color: #e9e9e9;
+    background-repeat: round;
+    background-size: 100% auto;
+    height: 80vh;
+}
+
+.display-responsive {
+    display: none;
+}
+
+.tachado{
+    text-decoration:line-through;
+}
+
+.img-principal-curso
+{
+    width: 50%;
+}
+
+.btn-white {
+    color:white;
+}
+
+.incentives {
+    background-color: #f9f9f9;
+    border: 1px solid #dedfe0;
+    padding: 10px 15px;
+    margin: 10px 0;
+}
+
+#botonGoToInscripcion {
+    margin-bottom: 30px;
 }

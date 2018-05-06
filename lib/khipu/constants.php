@@ -6,7 +6,7 @@ define('RECEIVER_ID', 55616);
 define('SECRET', 'b210539ae75e3e656134f4aeba6661f522ca150e');
 define('KHIPU_URL', 'https://khipu.com/api/1.2/');
 define('BASE_DIRECTORY', 'http://cognitivo.cl/');
-define('RETURN_URL', 'curso-tea-manejo-conductas-complejas-finish/');
+define('RETURN_URL', 'curso-dificultades-sensoriales-red-sensorial-finish/');
 define('NOTIFY_URL', BASE_DIRECTORY . 'curso-tea-manejo-conductas-complejas-notify-js/');
 //define('RETURN_URL', BASE_DIRECTORY . 'curso-tea-manejo-conductas-complejas-finish.php');
 //define('NOTIFY_URL', BASE_DIRECTORY . 'curso-tea-manejo-conductas-complejas-notify-js.php');

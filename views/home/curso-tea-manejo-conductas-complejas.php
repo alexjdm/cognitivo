@@ -79,6 +79,8 @@
 
             <div class="col-sm-12">
                 <h2>Inscripción</h2>
+                <h5>Cupos agotados! :(</h5>
+                <!--
                 <h5>Llena los datos para tu inscripción.</h5>
 
                 <form class="form-horizontal" role="form" action="curso-tea-manejo-conductas-complejas-process/" method="post" onsubmit="document.getElementById('nombreBanco').value=document.getElementById('bankId').options[document.getElementById('bankId').selectedIndex].text;">
@@ -139,7 +141,7 @@
                     </div>
                     <input type="hidden" name="nombreBanco" id="nombreBanco" value="" />
                 </form>
-
+                -->
             </div>
         </div>
     </div>

@@ -183,6 +183,12 @@ class adminController {
         return $cursoBusiness->enviarCorreoConfirmacion($idInscrito);
     }
 
+    public function enviarcorreomasivo() {
+
+        $cursoBusiness = new Curso();
+        return $cursoBusiness->enviarCorreoMasivo();
+    }
+
     /// REGION CURSOS
 
 

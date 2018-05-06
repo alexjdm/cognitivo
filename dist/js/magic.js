@@ -8,7 +8,7 @@ $(document).ready(function(){
             'inputPhone':$('input[name=inputPhone]').val(),
             'inputMessage':$('textarea[name=inputMessage]').val()
         };
-        debugger;
+        //debugger;
         $.ajax({
             type:'POST',
             url:'contact/contactpage/',

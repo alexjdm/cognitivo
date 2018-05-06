@@ -225,4 +225,41 @@ class Curso_DAO
         Database::disconnect();
     }
 
+    public function agregarCorreoMasivoEnviado($idCorreoMasivo, $correo) {
+
+        if (!defined("PHP_EOL")) define("PHP_EOL", "\r\n");
+
+        $pdo = Database::connect();
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        $sql = $pdo->prepare("SELECT * FROM correo_masivo_usuario WHERE ID_CORREO_MASIVO=$idCorreoMasivo AND CORREO= :CORREO");
+        $sql->execute(array('CORREO' => $correo));
+
+        $resultado = $sql->fetchAll();
+
+        if($resultado == null)
+        {
+            $sql = $pdo->prepare("INSERT INTO `correo_masivo_usuario`(`ID_CORREO_MASIVO`, `CORREO`, `ESTADO`) VALUES (:ID_CORREO_MASIVO,:CORREO,'1')");
+
+            if($sql->execute(array('ID_CORREO_MASIVO' => trim($idCorreoMasivo), 'CORREO' => $correo))) {
+                $status  = "success";
+                $message = "Creación exitosa.";
+            }
+            else{
+                $status  = "error";
+                $message = "Error con la base de datos, por favor intente nuevamente.";
+            }
+        }
+
+        $data = array(
+            'status'  => $status,
+            'message' => $message
+        );
+
+        //echo json_encode($data);
+
+        Database::disconnect();
+
+    }
+
 }
