@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+		xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
 		http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 	<url>
@@ -22,19 +22,57 @@
 		<lastmod>2016-02-06T18:59:38+00:00</lastmod>
 	</url>
 	<url>
-		<loc>http://cognitivo.cl/blog/fenomeno-causa-efecto-bebe/</loc>
-		<lastmod>2016-02-06T18:59:39+00:00</lastmod>
-	</url>
-	<url>
 		<loc>http://cognitivo.cl/blog/cuanto-tiempo-uso-chupete/</loc>
 		<lastmod>2016-02-06T18:59:38+00:00</lastmod>
 	</url>
 	<url>
-		<loc>http://cognitivo.cl/blog/aporte-terapeuta-ocupacional/</loc>
-		<lastmod>2017-08-06T18:59:39+00:00</lastmod>
+		<loc>http://cognitivo.cl/blog/fenomeno-causa-efecto-bebe/</loc>
+		<lastmod>2016-02-06T18:59:39+00:00</lastmod>
+	</url>
+	<url>
+		<loc>http://www.cognitivo.cl/blog/aporte-terapeuta-ocupacional/</loc>
+		<lastmod>2017-08-30T18:59:39+00:00</lastmod>
+	</url>
+	<url>
+		<loc>http://www.cognitivo.cl/blog/que-es-la-psicopedagogia/</loc>
+		<lastmod>2017-10-16T18:59:39+00:00</lastmod>
+	</url>
+	<url>
+		<loc>http://www.cognitivo.cl/blog/que-es-la-fonoaudiologia/</loc>
+		<lastmod>2017-10-20T18:59:39+00:00</lastmod>
+	</url>
+	<url>
+		<loc>http://www.cognitivo.cl/blog/tramites-tea/</loc>
+		<lastmod>2017-11-27T18:59:39+00:00</lastmod>
+	</url>
+	<url>
+		<loc>http://www.cognitivo.cl/blog/integracion-sensorial/</loc>
+		<lastmod>2018-01-04T18:59:39+00:00</lastmod>
+	</url>
+	<url>
+		<loc>http://www.cognitivo.cl/blog/juego-terapias/</loc>
+		<lastmod>2018-01-22T22:59:39+00:00</lastmod>
+	</url>
+	<url>
+		<loc>http://www.cognitivo.cl/blog/por-que-mi-hijo-no-tolera-alimentos/</loc>
+		<lastmod>2018-05-10T19:39:38+00:00</lastmod>
+	</url>
+
+	<url>
+		<loc>http://www.cognitivo.cl/curso-tea-manejo-conductas-complejas/</loc>
+		<lastmod>2018-03-01T18:59:38+00:00</lastmod>
 	</url>
 	<url>
 		<loc>http://www.cognitivo.cl/curso-dificultades-sensoriales-red-sensorial/</loc>
 		<lastmod>2018-03-01T18:59:38+00:00</lastmod>
 	</url>
+	<url>
+		<loc>http://www.cognitivo.cl/curso-integracion-sensorial-alimentacion/</loc>
+		<lastmod>2018-04-28T15:59:38+00:00</lastmod>
+	</url>
+	<url>
+		<loc>http://www.cognitivo.cl/curso-comunicacion-hijos-sin-habla/</loc>
+		<lastmod>2018-05-27T15:31:38+00:00</lastmod>
+	</url>
+
 </urlset>

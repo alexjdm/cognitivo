@@ -16,6 +16,23 @@
             <div class="col-sm-8">
 
                 <article class="post">
+                    <h2 class="entry-title">¿Por qué mi hijo no tolera los alimentos?</h2>
+                    <div class="entry-meta">
+                        <span class="date"><i class="fa fa-calendar"></i>Mayo 10, 2018</span>
+                        <span class="author"><i class="fa fa-user"></i>Por Equipo Cognitivo</span>
+                    </div>
+                    <div class="post-thumb">
+                        <img src="dist/images/blog/por-que-mi-hijo-no-tolera-alimentos.jpg" alt="Juego en terapias" class="img-responsive" />
+                    </div>
+                    <div class="entry-content">
+                        <p>Los problemas de alimentación son cada vez más comunes, sobretodo si los asociamos a la condición del Espectro Autista.</p>
+                    </div>
+                    <div class="post-more">
+                        <a href="blog/por-que-mi-hijo-no-tolera-alimentos/" class="btn btn-primary">LEER MÁS</a>
+                    </div>
+                </article>
+
+                <article class="post">
                     <h2 class="entry-title">¿Por qué mi hijo juega en las sesiones de terapia?</h2>
                     <div class="entry-meta">
                         <span class="date"><i class="fa fa-calendar"></i>Enero 21, 2018</span>

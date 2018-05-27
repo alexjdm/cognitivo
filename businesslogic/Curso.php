@@ -27,7 +27,7 @@ class Curso {
             $mail->Host = 'mail.cognitivo.cl';  // Specify main and backup SMTP servers
             $mail->SMTPAuth = true;                               // Enable SMTP authentication
             $mail->Username = 'inscripciones@cognitivo.cl';                 // SMTP username
-            $mail->Password = 'cognitivo08';                           // SMTP password
+            $mail->Password = '495@UC_-Xq8(';                           // SMTP password
             $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
             $mail->Port = 465;                                    // TCP port to connect to
 

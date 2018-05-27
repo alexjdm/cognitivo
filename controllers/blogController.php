@@ -108,6 +108,17 @@ class blogController {
         require_once('views/layout.php');
     }
 
+    public function porquemihijonotoleraalimentos() {
+        $this->pageTitle = '¿Por qué mi hijo no tolera los alimentos? | Blog Cognitivo';
+        $this->pageDescription = "Los problemas de alimentación son cada vez más comunes, sobretodo si los asociamos a la condición del Espectro Autista.";
+        $this->pageKeywords = "integración sensorial, alimentación";
+        $this->page = 'views/blog/por-que-mi-hijo-no-tolera-alimentos.php';
+        $this->navbar = 'navbar-interior.php';
+        $this->navbarfooter = 'navbar-footer.php';
+
+        require_once('views/layout.php');
+    }
+
     public function error() {
         $this->pageTitle = 'Error | Librodeasistencia';
         $this->pageDescription = "librodeasistencia.com permite gestionar el reloj control de asistencia biométrico en forma online. Software 100% web.";

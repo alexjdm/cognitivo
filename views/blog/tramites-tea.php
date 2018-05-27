@@ -53,6 +53,7 @@
             <aside class="col-sm-4">
                 <h5><i class="fa fa-file-text fa-lg"></i>POSTS RECIENTES</h5>
                 <ul class="submenu">
+                    <li><a href="blog/por-que-mi-hijo-no-tolera-alimentos/">¿Por qué mi hijo no tolera los alimentos?</a></li>
                     <li><a href="blog/juego-terapias/">¿Por qué mi hijo juega en las sesiones de terapia?</a></li>
                     <li><a href="blog/integracion-sensorial/">¿Qué significa que mi hijo tenga dificultades en el procesamiento sensorial?</a></li>
                     <li><a href="blog/tramites-tea/">¿Cómo hacer trámites con un niño con TEA?</a></li>
