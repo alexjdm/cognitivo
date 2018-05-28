@@ -449,22 +449,22 @@ EOF;
 
 
 
-    public function cursocomunicacionhijossinhabla() {
-        $this->pageTitle = '¿Cómo me comunico con mi hijo si no habla? | Cognitivo';
+    public function cursocomoayudarhijoscomunicarse() {
+        $this->pageTitle = '¿Cómo le ayudo a mi hijo a comunicarse? | Cognitivo';
         $this->pageDescription = "Curso para padres sobre la comunicación de sus hijos en sus etapas del desarrollo.";
         $this->pageKeywords = "Curso, Autismo, TEA, Problemas de comunicación,";
-        $this->page = 'views/home/curso-comunicacion-hijos-sin-habla.php';
+        $this->page = 'views/home/curso-como-ayudar-hijos-comunicarse.php';
         $this->navbar = 'navbar-interior.php';
         $this->navbarfooter = 'navbar-footer.php';
 
         require_once('views/layout.php');
     }
 
-    public function cursocomunicacionhijossinhablaprocess() {
-        $this->pageTitle = '¿Cómo me comunico con mi hijo si no habla? | Cognitivo';
+    public function cursocomoayudarhijoscomunicarseprocess() {
+        $this->pageTitle = '¿Cómo le ayudo a mi hijo a comunicarse? | Cognitivo';
         $this->pageDescription = "Curso para padres sobre la comunicación de sus hijos en sus etapas del desarrollo.";
         $this->pageKeywords = "Curso, Autismo, TEA, Problemas de comunicación,";
-        $this->page = 'views/home/curso-comunicacion-hijos-sin-habla-process.php';
+        $this->page = 'views/home/curso-como-ayudar-hijos-comunicarse-process.php';
         $this->navbar = 'navbar-interior.php';
         $this->navbarfooter = 'navbar-footer.php';
 
@@ -504,18 +504,18 @@ EOF;
         require_once('views/layout.php');
     }
 
-    public function cursocomunicacionhijossinhablafinish() {
-        $this->pageTitle = '¿Cómo me comunico con mi hijo si no habla? | Cognitivo';
+    public function cursocomoayudarhijoscomunicarsefinish() {
+        $this->pageTitle = '¿Cómo le ayudo a mi hijo a comunicarse? | Cognitivo';
         $this->pageDescription = "Curso para padres sobre la comunicación de sus hijos en sus etapas del desarrollo.";
         $this->pageKeywords = "Curso, Autismo, TEA, Problemas de comunicación,";
-        $this->page = 'views/home/curso-comunicacion-hijos-sin-habla-finish.php';
+        $this->page = 'views/home/curso-como-ayudar-hijos-comunicarse-finish.php';
         $this->navbar = 'navbar-interior.php';
         $this->navbarfooter = 'navbar-footer.php';
 
         require_once('views/layout.php');
     }
 
-    public function cursocomunicacionhijossinhablanotifyjs() {
+    public function cursocomoayudarhijoscomunicarsenotifyjs() {
         $my_receiver_id = 55616;
         //$my_receiver_id = 169939; // Modo desarrollador
 
@@ -552,7 +552,7 @@ EOF;
 
         $line = "Validacion remota [Message: $to_send, Signature: $notification_signature, Valid: $response]\n";
 
-        $myFile = 'curso-comunicacion-hijos-sin-habla-khipu-js.log';
+        $myFile = 'curso-como-ayudar-hijos-comunicarse-khipu-js.log';
         $fh = fopen($myFile,'a') or die("can't open file");
         fwrite($fh, print_r($_REQUEST, true));
         fwrite($fh, $line);

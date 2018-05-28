@@ -37,15 +37,15 @@ curl_close($ch);
 
 $line = "Validacion remota [Message: $to_send, Signature: $notification_signature, Valid: $response]\n";
 
-$myFile = 'curso-tea-manejo-conductas-complejas-khipu-js.log';
+$myFile = 'curso-como-ayudar-hijos-comunicarse-khipu-js.log';
 $fh = fopen($myFile,'a') or die("can't open file");
 fwrite($fh, print_r($_REQUEST, true));
 fwrite($fh, $line);
 
 if ($transaction_id == 'demo-js-transaction-1' && $response == 'VERIFIED' && $receiver_id == $my_receiver_id) {
-	$headers = 'From: "Curso.php Cognitivo" <no-responder@khipu.com>' . "\r\n";
+	$headers = 'From: "Curso Cognitivo" <no-responder@khipu.com>' . "\r\n";
 	$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-	$subject = 'Pago exitoso Curso.php Cognitivo';
+	$subject = 'Pago exitoso Curso Cognitivo';
 	$body = <<<EOF
 Hola<br/>
 <br/>

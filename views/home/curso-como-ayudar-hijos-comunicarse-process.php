@@ -6,9 +6,9 @@
     <div class="container">
         <div class="row text-center no-fade" style="opacity: 1;">
             <div class="col-sm-12 text-left">
-                <h2 style="font-family: 'Bariol Regular'; font-size: 16pt;">Seminario Intensivo:</h2>
-                <h1 style="font-family: Dosis; margin-top: 0; margin-bottom: 15px;"><b>AUTISMO Y PROBLEMAS DE ALIMENTACIÓN</b></h1>
-                <p>Problemas de alimentación, Autismo, Motricidad Orofacial, Procesamiento Sensorial. Estrategias para la casa y colegio, entre otros temas.</p>
+                <h2 style="font-family: 'Bariol Regular'; font-size: 16pt;">Curso para padres:</h2>
+                <h1 style="font-family: Dosis; margin-top: 0; margin-bottom: 15px;"><b>¿CÓMO LE AYUDO A MI HIJO A COMUNICARSE?</b></h1>
+                <p>En este curso se resolverán problemáticas asociadas a la preocupación de padres por sus hijos que no hablan. Se abordarán las preguntas, ¿Cuándo lo harán? o ¿Cómo poder ayudarlos en este proceso? de una forma didáctica, práctica y entretenida. Inscríbete!</p>
 
 
                 <h1 class="inline" style="font-family: 'Bariol Regular'; margin-bottom: 0;: ">$10.000 <span class="inline tachado" style="font-size: 12pt;">$12.000 CLP c/u</span></h1>

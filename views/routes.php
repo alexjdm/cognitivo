@@ -73,7 +73,7 @@ $controllers = array(
         'cursoteamanejoconductascomplejas', 'cursoteamanejoconductascomplejasprocess', 'cursoteamanejoconductascomplejasfinish', 'cursoteamanejoconductascomplejasnotifyjs',
         'cursodificultadessensorialesredsensorial', 'cursodificultadessensorialesredsensorialprocess', 'cursodificultadessensorialesredsensorialfinish', 'cursodificultadessensorialesredsensorialnotifyjs',
         'cursointegracionsensorialalimentacion', 'cursointegracionsensorialalimentacionprocess', 'cursointegracionsensorialalimentacionfinish', 'cursointegracionsensorialalimentacionnotifyjs',
-        'cursocomunicacionhijossinhabla', 'cursocomunicacionhijossinhablaprocess', 'cursocomunicacionhijossinhablafinish', 'cursocomunicacionhijossinhablanotifyjs',
+        'cursocomoayudarhijoscomunicarse', 'cursocomoayudarhijoscomunicarseprocess', 'cursocomoayudarhijoscomunicarsefinish', 'cursocomoayudarhijoscomunicarsenotifyjs',
         'error'],
     'blog' => ['index', 'cuantotiempousochupete', 'fenomenocausaefectobebe', 'aporteterapeutaocupacional', 'queeslapsicopedagogia',
         'queeslafonoaudiologia', 'tramitestea', 'integracionsensorial', 'juegoterapias', 'porquemihijonotoleraalimentos',

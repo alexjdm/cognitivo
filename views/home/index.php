@@ -27,9 +27,9 @@
                 <div class="item active">
                     <div class="col-md-7 col-sm-7 col-xs-12 divizq-curso">
                         <h4 class="tituloBannerH4">Curso para Padres:</h4>
-                        <h1 class="tituloBannerH1" style="font-family: Dosis; font-size: 28pt;">¿CÓMO ME COMUNICO CON MI HIJO SI NO HABLA?</h1>
+                        <h1 class="tituloBannerH1" style="font-family: Dosis; font-size: 28pt;">¿CÓMO LE AYUDO A MI HIJO A COMUNICARSE?</h1>
                         <h4 class="tituloBannerH4" style="margin-top: 2%;">¡Cupos Limitados! No te lo pierdas</h4>
-                        <a class="btn btn-primary btnInscribir-curso1" href="curso-comunicacion-hijos-sin-habla/">INSCRÍBETE</a>
+                        <a class="btn btn-primary btnInscribir-curso1" href="curso-como-ayudar-hijos-comunicarse/">INSCRÍBETE</a>
 
                         <div class="col-md-12 curso1-horarios">
                             <p style="display: inline"><img src="dist/images/calendar.png" width="20px"> 09 junio 2018</p>

@@ -7,7 +7,7 @@
         <div class="row text-center no-fade" style="opacity: 1;">
             <div class="col-sm-12 text-left">
                 <h2 style="font-family: 'Bariol Regular'; font-size: 16pt;">Curso para padres:</h2>
-                <h1 style="font-family: Dosis; margin-top: 0; margin-bottom: 15px;"><b>¿CÓMO ME COMUNICO CON MI HIJO SI NO HABLA?</b></h1>
+                <h1 style="font-family: Dosis; margin-top: 0; margin-bottom: 15px;"><b>¿CÓMO LE AYUDO A MI HIJO A COMUNICARSE?</b></h1>
                 <p>En este curso se resolverán problemáticas asociadas a la preocupación de padres por sus hijos que no hablan. Se abordarán las preguntas, ¿Cuándo lo harán? o ¿Cómo poder ayudarlos en este proceso? de una forma didáctica, práctica y entretenida. Inscríbete!</p>
 
 
@@ -24,18 +24,10 @@
         <div class="text-center">
 
             <div class="row">
-                <div class="col-md-12">
-                    <p style="padding-top: 30px;">Problemas de alimentación, Autismo, Motricidad Orofacial, Procesamiento Sensorial. Estrategias para la casa y colegio, entre otros temas.</p>
-                    <p>El curso será dictado por Pedro Sanchez fundador de Red Sensorial y Catherine Fournier Magister en Motricidad Orofacial.</p>
-                    <p>El curso está especialmente dirigido a: Fonoaudiología, Terapia Ocupacional, Psicología, Psicopedagogía, Kinesiología, Educación Diferencial.</p>
-                </div>
-            </div>
-
-            <div class="row">
 
                 <div class="col-md-6">
                     <div class="incentives">
-                        <h2>Temario</h2>
+                        <h3>Temario</h3>
 
                         <p class="text-left">Tema 1: Lenguaje</p>
                         <ul>
@@ -60,6 +52,18 @@
                         </ul>
                         <p><i>Este Programa requiere un número mínimo de matriculados para dictarse y puede sufrir cambios en la programación por razones de fuerza mayor.</i></p>
                     </div>
+
+                    <div class="incentives">
+                        <h3>Expositores</h3>
+                        <p>El curso será dictado por dos de nuestras fonoaudiólogas del centro.</p>
+
+                        <h4>Virginia Chávez</h4>
+                        <p>Fonoaudióloga, Universidad de Chile. <a href="https://www.linkedin.com/in/virginia-chavez-tarraff-9752b015b/" target="_blank"><i class="fa fa-linkedin-square"></i></a></p>
+
+                        <h4>Camila Iglesias</h4>
+                        <p>Fonoaudióloga, Universidad Nacional Andrés Bello. <a href="https://www.linkedin.com/in/camila-iglesias-iglesias-583519a1/" target="_blank"><i class="fa fa-linkedin-square"></i></a></p>
+                    </div>
+
                 </div>
 
                 <div class="col-md-6">
@@ -100,7 +104,7 @@
 
                 <h5>Llena los datos para tu inscripción.</h5>
 
-                <form class="form-horizontal" role="form" action="curso-comunicacion-hijos-sin-habla-process/" method="post" onsubmit="document.getElementById('nombreBanco').value=document.getElementById('bankId').options[document.getElementById('bankId').selectedIndex].text;">
+                <form class="form-horizontal" role="form" action="curso-como-ayudar-hijos-comunicarse-process/" method="post" onsubmit="document.getElementById('nombreBanco').value=document.getElementById('bankId').options[document.getElementById('bankId').selectedIndex].text;">
                     <div class="col-sm-6">
                         <div class="form-group <?php echo $_REQUEST['invalid'] ? 'has-error' : ''; ?>">
                             <label for="name" class="col-sm-4 control-label">Nombre completo</label>
