@@ -16,6 +16,23 @@
             <div class="col-sm-8">
 
                 <article class="post">
+                    <h2 class="entry-title">¿Cómo me comunico con mi hijo si no habla?</h2>
+                    <div class="entry-meta">
+                        <span class="date"><i class="fa fa-calendar"></i>Junio 06, 2018</span>
+                        <span class="author"><i class="fa fa-user"></i>Por Equipo Cognitivo</span>
+                    </div>
+                    <div class="post-thumb">
+                        <img src="dist/images/blog/como-me-comunico-con-mi-hijo-si-no-habla.jpg" alt="Juego en terapias" class="img-responsive" />
+                    </div>
+                    <div class="entry-content">
+                        <p>La mayoría de los padres que llegan a Cognitivo están preocupados porque <b>sus hijos no hablan</b>. En base a esto, lo que más les intriga es saber cuándo lo harán o <b>cómo poder ayudarlos en este proceso</b>. Lo que muchos padres NO saben es que <b>estos pequeños se comunican antes de decir sus primeras palabras.</b></p>
+                    </div>
+                    <div class="post-more">
+                        <a href="blog/como-me-comunico-con-mi-hijo-si-no-habla/" class="btn btn-primary">LEER MÁS</a>
+                    </div>
+                </article>
+
+                <article class="post">
                     <h2 class="entry-title">¿Por qué mi hijo no tolera los alimentos?</h2>
                     <div class="entry-meta">
                         <span class="date"><i class="fa fa-calendar"></i>Mayo 10, 2018</span>

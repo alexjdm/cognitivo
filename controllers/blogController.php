@@ -119,6 +119,17 @@ class blogController {
         require_once('views/layout.php');
     }
 
+    public function comomecomunicoconmihijosinohabla() {
+        $this->pageTitle = '¿Cómo me comunico con mi hijo si no habla? | Blog Cognitivo';
+        $this->pageDescription = "Los problemas de alimentación son cada vez más comunes, sobretodo si los asociamos a la condición del Espectro Autista.";
+        $this->pageKeywords = "integración sensorial, alimentación";
+        $this->page = 'views/blog/como-me-comunico-con-mi-hijo-si-no-habla.php';
+        $this->navbar = 'navbar-interior.php';
+        $this->navbarfooter = 'navbar-footer.php';
+
+        require_once('views/layout.php');
+    }
+
     public function error() {
         $this->pageTitle = 'Error | Librodeasistencia';
         $this->pageDescription = "librodeasistencia.com permite gestionar el reloj control de asistencia biométrico en forma online. Software 100% web.";

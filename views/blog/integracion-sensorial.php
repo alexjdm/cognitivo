@@ -59,15 +59,7 @@
             <aside class="col-sm-4">
                 <h5><i class="fa fa-file-text fa-lg"></i>POSTS RECIENTES</h5>
                 <ul class="submenu">
-                    <li><a href="blog/por-que-mi-hijo-no-tolera-alimentos/">¿Por qué mi hijo no tolera los alimentos?</a></li>
-                    <li><a href="blog/juego-terapias/">¿Por qué mi hijo juega en las sesiones de terapia?</a></li>
-                    <li><a href="blog/integracion-sensorial/">¿Qué significa que mi hijo tenga dificultades en el procesamiento sensorial?</a></li>
-                    <li><a href="blog/tramites-tea/">¿Cómo hacer trámites con un niño con TEA?</a></li>
-                    <li><a href="blog/que-es-la-fonoaudiologia/">¿Qué es la Fonoaudiología?</a></li>
-                    <li><a href="blog/que-es-la-psicopedagogia/">¿Qué es la Psicopedagogía?</a></li>
-                    <li><a href="blog/aporte-terapeuta-ocupacional/">¿En qué puede ayudar un terapeuta ocupacional a mi hijo?</a></li>
-                    <li><a href="blog/fenomeno-causa-efecto-bebe/">Fenómeno Causa-Efecto al bebé</a></li>
-                    <li><a href="blog/cuanto-tiempo-uso-chupete/">¿Cuánto tiempo se debe usar el chupete?</a></li>
+                    <?php require('post_recientes.php'); ?>
                 </ul>
                 <hr>
                 <!-- <h5><i class="fa fa-folder-open fa-lg"></i>CATEGORIES</h5>
