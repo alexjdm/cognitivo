@@ -580,6 +580,139 @@ EOF;
 
 
 
+
+
+    public function cursodesarrollohabilidadesescolares() {
+        $this->pageTitle = 'Desarrollo de habilidades y aprendizajes escolares | Cognitivo';
+        $this->pageDescription = "Curso que entrega herramientas a los padres sobre las dificultades de sus hijos en epoca escolar.";
+        $this->pageKeywords = "Curso, Autismo, TEA, aprendizaje escolar";
+        $this->page = 'views/home/curso-desarrollo-habilidades-escolares.php';
+        $this->navbar = 'navbar-interior.php';
+        $this->navbarfooter = 'navbar-footer.php';
+
+        require_once('views/layout.php');
+    }
+
+    public function cursodesarrollohabilidadesescolaresprocess() {
+        $this->pageTitle = 'Desarrollo de habilidades y aprendizajes escolares | Cognitivo';
+        $this->pageDescription = "Curso que entrega herramientas a los padres sobre las dificultades de sus hijos en epoca escolar.";
+        $this->pageKeywords = "Curso, Autismo, TEA, aprendizaje escolar";
+        $this->page = 'views/home/curso-desarrollo-habilidades-escolares-process.php';
+        $this->navbar = 'navbar-interior.php';
+        $this->navbarfooter = 'navbar-footer.php';
+
+        $name		= sanear_string($_POST['name']);
+        $rut		= $_POST['rut'];
+        $email 		= $_POST['email'];
+        $phone 		= $_POST['phone'];
+        $comuna 	= $_POST['comuna'];
+        $ocupacion 	= "";
+        $carrera 	= "";
+        $id_transaccion 	= rand(10000, 99999);
+        $bankId 	= $_POST['bankId'];
+        $nombreBanco 	= $_POST['nombreBanco'];
+
+        $precio		= 10000;
+        $idCurso	= 6;
+
+        if (!filter_var($_REQUEST['email'], FILTER_VALIDATE_EMAIL)) {
+            header('Location: index.php?invalid=true');
+            return;
+        }
+
+        date_default_timezone_set("America/Santiago");
+
+
+        if (!defined("PHP_EOL")) define("PHP_EOL", "\r\n");
+
+        $pdo = Database::connect();
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        $sql = $pdo->prepare('INSERT INTO `inscritos`(`name`, `rut`, `email`, `phone`, `COMUNA`, `ocupacion`, `carrera`, `pagado`, `banco`, `precio`, `fecha`, `llamado`, `comentario`, `id_transaccion`, `ID_CURSO`) VALUES ("'.$name.'", "'.$rut.'", "'.$email.'", "'.$phone.'", "'.$comuna.'", "'.$ocupacion.'", "'.$carrera.'", "0", "'.$_REQUEST['nombreBanco'].'", "'.$precio.'", now(), "0", "", "'.$id_transaccion.'", "'.$idCurso.'")');
+        $sql->execute();
+
+        $json = khipu_get_new_payment($_REQUEST['email'], $_REQUEST['bankId'], $precio, $id_transaccion);
+        $data = urlencode($json);
+
+        require_once('views/layout.php');
+    }
+
+    public function cursodesarrollohabilidadesescolaresfinish() {
+        $this->pageTitle = 'Desarrollo de habilidades y aprendizajes escolares | Cognitivo';
+        $this->pageDescription = "Curso que entrega herramientas a los padres sobre las dificultades de sus hijos en epoca escolar.";
+        $this->pageKeywords = "Curso, Autismo, TEA, aprendizaje escolar";
+        $this->page = 'views/home/curso-desarrollo-habilidades-escolares-finish.php';
+        $this->navbar = 'navbar-interior.php';
+        $this->navbarfooter = 'navbar-footer.php';
+
+        require_once('views/layout.php');
+    }
+
+    public function cursodesarrollohabilidadesescolaresnotifyjs() {
+        $my_receiver_id = 55616;
+        //$my_receiver_id = 169939; // Modo desarrollador
+
+        // Leer los parametros enviados por khipu
+        $api_version = $_POST['api_version'];
+        $receiver_id = $_POST['receiver_id'];
+        $notification_id = $_POST['notification_id'];
+        $subject = $_POST['subject'];
+        $amount = $_POST['amount'];
+        $currency = $_POST['currency'];
+        $custom = $_POST['custom'];
+        $transaction_id = $_POST['transaction_id'];
+        $payer_email = $_POST['payer_email'];
+        $notification_signature = $_POST['notification_signature'];
+
+        // Creamos el string para enviar
+        $to_send = 'api_version=' . urlencode($api_version) .
+            '&receiver_id=' . urlencode($receiver_id) .
+            '&notification_id=' . urlencode($notification_id) .
+            '&subject=' . urlencode($subject) .
+            '&amount=' . urlencode($amount) .
+            '&currency=' . urlencode($currency) .
+            '&transaction_id=' . urlencode($transaction_id) .
+            '&payer_email=' . urlencode($payer_email) .
+            '&custom=' . urlencode($custom);
+
+        $ch = curl_init("https://khipu.com/api/1.2/verifyPaymentNotification");
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $to_send . "&notification_signature=" . urlencode($notification_signature));
+        $response = curl_exec($ch);
+        curl_close($ch);
+
+        $line = "Validacion remota [Message: $to_send, Signature: $notification_signature, Valid: $response]\n";
+
+        $myFile = 'curso-desarrollo-habilidades-escolares-khipu-js.log';
+        $fh = fopen($myFile,'a') or die("can't open file");
+        fwrite($fh, print_r($_REQUEST, true));
+        fwrite($fh, $line);
+
+        if ($transaction_id == 'demo-js-transaction-1' && $response == 'VERIFIED' && $receiver_id == $my_receiver_id) {
+            $headers = 'From: "Curso Cognitivo" <no-responder@khipu.com>' . "\r\n";
+            $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+            $subject = 'Pago exitoso Curso Cognitivo';
+            $body = <<<EOF
+Hola<br/>
+<br/>
+<p>
+Recibes este correo pues el pago fue conciliado por Khipu.
+</p>
+<br><br>Atentamente,<br>Equipo Cognitivo<br><img src='dist/images/logo-hor.png'>
+EOF;
+            mail($custom, $subject, $body, $headers);
+            fwrite($fh, "Enviado $subject a $custom");
+        }
+        fclose($fh);
+
+    }
+
+
+
+
+
     public function error() {
         $this->pageTitle = 'Error | Cognitivo';
         $this->pageDescription = "Cognitvo centre de terapias especialista en TEA.";
