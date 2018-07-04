@@ -129,7 +129,8 @@
         //var table = $("#tablaPagados").dataTable();
         var table = $("#tablaPagados").dataTable({
             "aLengthMenu": [[25, 50, 75, -1], [25, 50, 75, "All"]],
-            "iDisplayLength": -1
+            "iDisplayLength": -1,
+            "scrollX": true
         });
 
         $("#tablaPagados").on("click", ".enviarConfirmacion", function () {

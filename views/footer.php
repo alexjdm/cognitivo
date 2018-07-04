@@ -3,8 +3,8 @@
         <div class="row text-center">
             <div class="col-sm-12">
                 <p>&copy; 2018 Cognitivo. <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><br>
-							<span itemprop="streetAddress">María Elvira 128, La Florida</span> <span itemprop="telephone">+569 5254 4533</span>, <br>
-							<span itemprop="streetAddress">Canela Alta 2803, Puente Alto</span> <span itemprop="telephone">+569 5134 8700</span>, <br>
+							<span itemprop="streetAddress">María Elvira 128, La Florida</span> <span itemprop="telephone">+56 9 8336 7622</span>, <br>
+							<span itemprop="streetAddress">Canela Alta 2803, Puente Alto</span> <span itemprop="telephone">+56 9 5254 4533</span>, <br>
 							<span itemprop="addressLocality">Santiago.</span>
 							<meta itemprop="addressCountry" content="Chile">
 							<meta itemprop="addressRegion" content="Metropolitana"></span><br/>

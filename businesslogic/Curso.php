@@ -38,17 +38,18 @@ class Curso {
             //$mail->addCC('cc@example.com');
             $mail->addBCC('alexjdm@gmail.com');
 
-            $message = file_get_contents('views/template/confirmacion-curso-integracion-sensorial.html');
+            $message = file_get_contents('views/template/confirmacion-curso-comunicacion-hijos.html');
             $message = str_replace('%nombrecompleto%', $inscrito['name'], $message);
 
             $mail->isHTML(true);                                  // Set email format to HTML
-            $mail->Subject = 'Confirmacion Curso Cognitivo';
+            $mail->Subject = 'Confirmación Curso Cognitivo';
             $mail->Body    = $message;
             //$mail->AltBody = 'Hola, has recibido correo a través de cognitivo.cl. Correo: ' . $correo . ' Telefono: ' . $telefono;
 
+            $mail->CharSet = 'UTF-8';
             $mail->send();
 
-            $cursoDao->updateInscrito($inscrito['id'], $inscrito['pagado'], $inscrito['llamado'], 1, $inscrito['comentario'], false);
+            //$cursoDao->updateInscrito($inscrito['id'], $inscrito['pagado'], $inscrito['llamado'], 1, $inscrito['comentario'], false);
 
             $status  = "success";
             $message = "El mail ha sido enviado exitosamente.";
@@ -71,8 +72,8 @@ class Curso {
     {
         $idCorreoMasivo = 1;
         $cursoDao = new Curso_DAO();
-        $inscritos1 = $cursoDao->getInscritos(1);
-        $inscritos2 = $cursoDao->getInscritos(2);
+        $inscritos1 = $cursoDao->getInscritos(3);
+        $inscritos2 = $cursoDao->getInscritos(5);
         $inscritos = $inscritos1;
         array_merge($inscritos, $inscritos2);
 
@@ -101,7 +102,7 @@ class Curso {
                 $mail->Host = 'mail.cognitivo.cl';  // Specify main and backup SMTP servers
                 $mail->SMTPAuth = true;                               // Enable SMTP authentication
                 $mail->Username = 'inscripciones@cognitivo.cl';                 // SMTP username
-                $mail->Password = 'cognitivo08';                           // SMTP password
+                $mail->Password = '495@UC_-Xq8(';                           // SMTP password
                 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
                 $mail->Port = 465;                                    // TCP port to connect to
 
@@ -112,18 +113,18 @@ class Curso {
                 //$mail->addCC('cc@example.com');
                 $mail->addBCC('alexjdm@gmail.com');
 
-                $message = file_get_contents('views/template/promocion-curso-red-sensorial.html');
+                $message = file_get_contents('views/template/promocion-curso-tres.html');
                 $message = str_replace('%nombrecompleto%', $inscritoFinal[0], $message);
 
                 $mail->isHTML(true);                                  // Set email format to HTML
-                $mail->Subject = 'Promoción Curso Autismo y Problemas de Alimentación';
+                $mail->Subject = 'Invitación Curso Cognitivo';
                 $mail->Body    = $message;
                 //$mail->AltBody = 'Hola, has recibido correo a través de cognitivo.cl. Correo: ' . $correo . ' Telefono: ' . $telefono;
 
                 $mail->CharSet = 'UTF-8';
                 $mail->send();
 
-                $cursoDao->agregarCorreoMasivoEnviado($idCorreoMasivo, $inscritoFinal[1]);
+                //$cursoDao->agregarCorreoMasivoEnviado($idCorreoMasivo, $inscritoFinal[1]);
 
             } catch (Exception $e) {
                 $status  = "error";

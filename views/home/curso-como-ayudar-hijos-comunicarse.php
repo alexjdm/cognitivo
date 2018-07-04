@@ -12,7 +12,7 @@
 
 
                 <h1 class="inline" style="font-family: 'Bariol Regular'; margin-bottom: 0;: ">$10.000 <span class="inline tachado" style="font-size: 12pt;">$12.000 CLP c/u</span></h1>
-                <p>Esta oferta termina este jueves 6 de junio</p>
+                <p>Esta oferta termina este jueves 7 de junio</p>
                 <button id="botonGoToInscripcion" data-id="inscripcionCurso3" class="btn btn-default" onclick="goToByScroll($(this).data('id'))">Inscribirse</button>
             </div>
         </div>

@@ -119,7 +119,8 @@
         //var table = $("#tablaInscritos").dataTable();
         var table = $("#tablaInscritos").dataTable({
             "aLengthMenu": [[25, 50, 75, -1], [25, 50, 75, "All"]],
-            "iDisplayLength": -1
+            "iDisplayLength": -1,
+            "scrollX": true
         });
 
         $("#tablaInscritos").on("click", ".detalleInscrito", (function() {
