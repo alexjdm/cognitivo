@@ -13,7 +13,25 @@
         <div class="row no-fade">
 
             <!-- Posts Start -->
-            <div class="col-sm-8">
+
+            <div class="col-sm-8 col-sm-offset-2">
+
+                <article class="post">
+                    <h2 class="entry-title">¿Cómo ayudo a mi hijo a desarrollar habilidades y aprendizajes escolares?</h2>
+                    <div class="entry-meta">
+                        <span class="date"><i class="fa fa-calendar"></i>Julio 08, 2018</span>
+                        <span class="author"><i class="fa fa-user"></i>Por Equipo Cognitivo</span>
+                    </div>
+                    <div class="post-thumb">
+                        <img src="dist/images/blog/desarrollo-habilidades-y-aprendizajes-escolares.jpg" alt="desarrollo de habilidades escolares" class="img-responsive" />
+                    </div>
+                    <div class="entry-content">
+                        <p>Muchos padres buscan como apoyar a sus hijos en el ámbito escolar, pero no siempre encuentran las herramientas para lograrlo.</p>
+                    </div>
+                    <div class="post-more">
+                        <a href="blog/desarrollo-habilidades-y-aprendizajes-escolares/" class="btn btn-primary">LEER MÁS</a>
+                    </div>
+                </article>
 
                 <article class="post">
                     <h2 class="entry-title">¿Cómo me comunico con mi hijo si no habla?</h2>

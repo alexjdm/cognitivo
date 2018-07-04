@@ -68,7 +68,7 @@
                         <p>$10.000</p>
 
                         <h3>Formas de pago.</h3>
-                        <p>Efectivo en sucursal La Florida.</p>
+                        <p>Efectivo en sucursal La Florida o Puente Alto.</p>
                         <p>Internet a través de khipu, luego de realizar tu inscripción.</p>
                         <p>Transferencia electrónica.</p>
                     </div>

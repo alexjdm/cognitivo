@@ -78,7 +78,7 @@ $controllers = array(
         'error'],
     'blog' => ['index', 'cuantotiempousochupete', 'fenomenocausaefectobebe', 'aporteterapeutaocupacional', 'queeslapsicopedagogia',
         'queeslafonoaudiologia', 'tramitestea', 'integracionsensorial', 'juegoterapias', 'porquemihijonotoleraalimentos',
-        'comomecomunicoconmihijosinohabla',
+        'comomecomunicoconmihijosinohabla', 'desarrollohabilidadesyaprendizajesescolares',
         'error'],
     'contact' => ['contactpage', 'ados', 'error'],
     'account' => ['login', 'logout', 'dologin', 'remember', 'rememberMail', 'error'],

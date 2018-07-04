@@ -130,6 +130,17 @@ class blogController {
         require_once('views/layout.php');
     }
 
+    public function desarrollohabilidadesyaprendizajesescolares() {
+        $this->pageTitle = '¿Cómo ayudo a mi hijo a desarrollar habilidades y aprendizajes escolares? | Blog Cognitivo';
+        $this->pageDescription = "Muchos padres buscan como apoyar a sus hijos en el ámbito escolar, pero no siempre encuentran las herramientas para lograrlo. ";
+        $this->pageKeywords = "aprendizaje, habilidaes, escolaridad";
+        $this->page = 'views/blog/desarrollo-habilidades-y-aprendizajes-escolares.php';
+        $this->navbar = 'navbar-interior.php';
+        $this->navbarfooter = 'navbar-footer.php';
+
+        require_once('views/layout.php');
+    }
+
     public function error() {
         $this->pageTitle = 'Error | Librodeasistencia';
         $this->pageDescription = "librodeasistencia.com permite gestionar el reloj control de asistencia biométrico en forma online. Software 100% web.";
