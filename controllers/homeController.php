@@ -613,7 +613,7 @@ EOF;
         $nombreBanco 	= $_POST['nombreBanco'];
 
         $precio		= 10000;
-        $idCurso	= 6;
+        $idCurso	= 7;
 
         if (!filter_var($_REQUEST['email'], FILTER_VALIDATE_EMAIL)) {
             header('Location: index.php?invalid=true');
