@@ -22,7 +22,7 @@ require ('../includes/base.php');
     <!-- font-awesome -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- google font -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700,800' rel='stylesheet' type='text/css'>
 
     <!-- custom css -->
     <link rel="stylesheet" href="css/style.css">

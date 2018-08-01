@@ -1,6 +1,8 @@
 Header add Access-Control-Allow-Origin "*"
 
-RewriteEngine on
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
 RewriteRule ^index\.html$ http://cognitivo.cl/ [R=301,L]

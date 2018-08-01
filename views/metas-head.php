@@ -26,7 +26,7 @@
 <link href="dist/css/jquery.fancybox.css" rel="stylesheet">
 
 <!-- Google Fonts -->
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800|Pacifico" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800|Pacifico" rel="stylesheet">
 
 <!-- Font Awesome Icons -->
 <link href="dist/fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
