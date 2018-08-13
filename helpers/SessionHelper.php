@@ -12,7 +12,7 @@ function isSuperAdmin()
         @session_start();
     }
 
-    if($_SESSION['ID_PERFIL'] == '-1')
+    if($_SESSION['idPerfil'] == '-1')
         return true;
     else
         return false;

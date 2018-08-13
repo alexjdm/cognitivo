@@ -3,10 +3,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <base href="http://localhost/cognitivo/" />
-    <!--<base href="http://www.cognitivo.cl/" />-->
+    <!--<base href="https://www.cognitivo.cl/" />-->
 
     <title>Cognitivo</title>
-    <link rel="shortcut icon" href="http://www.cognitivo.cl/dist/images/favicon.png">
+    <link rel="shortcut icon" href="https://www.cognitivo.cl/dist/images/favicon.png">
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->

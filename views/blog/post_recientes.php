@@ -1,3 +1,4 @@
+<li><a href="blog/ayuda-hijos-enfermedades-respiratorias/">¿Cómo ayudar a mi hijo con enfermedades respiratorias?</a></li>
 <li><a href="blog/desarrollo-habilidades-y-aprendizajes-escolares/">¿Cómo ayudo a mi hijo a desarrollar habilidades y aprendizajes escolares?</a></li>
 <li><a href="blog/como-me-comunico-con-mi-hijo-si-no-habla/">¿Cómo me comunico con mi hijo si no habla?</a></li>
 <li><a href="blog/por-que-mi-hijo-no-tolera-alimentos/">¿Por qué mi hijo no tolera los alimentos?</a></li>

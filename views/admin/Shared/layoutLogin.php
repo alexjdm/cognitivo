@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <base href="http://localhost/cognitivo/" />
-    <!--<base href="http://www.cognitivo.cl/" />-->
+    <!--<base href="https://www.cognitivo.cl/" />-->
 
     <title><?php echo $this->pageTitle ?></title>
 

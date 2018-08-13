@@ -27,7 +27,7 @@ class Usuario_DAO
             $_SESSION['correo'] = $resultado['CORREO_ELECTRONICO'];
             $_SESSION['password'] = $resultado['CLAVE_USUARIO'];
             $_SESSION['image'] = $resultado['IMAGE'];
-            $_SESSION['ID_PERFIL'] = $resultado['ID_PERFIL'];
+            $_SESSION['idPerfil'] = $resultado['ID_PERFIL'];
 
             $status  = "success";
             $message = "Usuario registrado.";

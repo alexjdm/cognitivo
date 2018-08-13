@@ -141,6 +141,17 @@ class blogController {
         require_once('views/layout.php');
     }
 
+    public function ayudahijosenfermedadesrespiratorias() {
+        $this->pageTitle = '¿Cómo ayudar a mi hijo con enfermedades respiratorias? | Blog Cognitivo';
+        $this->pageDescription = "Muchos padres buscan como apoyar a sus hijos en el ámbito escolar, pero no siempre encuentran las herramientas para lograrlo. ";
+        $this->pageKeywords = "enfermedad respiratoria, infección respiratoria";
+        $this->page = 'views/blog/ayuda-hijos-enfermedades-respiratorias.php';
+        $this->navbar = 'navbar-interior.php';
+        $this->navbarfooter = 'navbar-footer.php';
+
+        require_once('views/layout.php');
+    }
+
     public function error() {
         $this->pageTitle = 'Error | Librodeasistencia';
         $this->pageDescription = "librodeasistencia.com permite gestionar el reloj control de asistencia biométrico en forma online. Software 100% web.";

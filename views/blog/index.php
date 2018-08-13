@@ -17,6 +17,23 @@
             <div class="col-sm-8 col-sm-offset-2">
 
                 <article class="post">
+                    <h2 class="entry-title">Medidas para poder mitigar y controlar los efectos de una infección respiratoria</h2>
+                    <div class="entry-meta">
+                        <span class="date"><i class="fa fa-calendar"></i>Agosto 13, 2018</span>
+                        <span class="author"><i class="fa fa-user"></i>Por Equipo Cognitivo</span>
+                    </div>
+                    <div class="post-thumb">
+                        <img src="dist/images/blog/ayuda-hijos-enfermedades-respiratorias.jpg" alt="Enfermedades respiratorias" class="img-responsive" />
+                    </div>
+                    <div class="entry-content">
+                        <p>La llegada del invierno implica también la llegada de patógenos que suelen ser epidémicos. Las enfermedades respiratorias son las más comunes y entre ellas, la más frecuente es el resfrío común.</p>
+                    </div>
+                    <div class="post-more">
+                        <a href="blog/ayuda-hijos-enfermedades-respiratorias/" class="btn btn-primary">LEER MÁS</a>
+                    </div>
+                </article>
+
+                <article class="post">
                     <h2 class="entry-title">¿Cómo ayudo a mi hijo a desarrollar habilidades y aprendizajes escolares?</h2>
                     <div class="entry-meta">
                         <span class="date"><i class="fa fa-calendar"></i>Julio 08, 2018</span>

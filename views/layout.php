@@ -11,6 +11,7 @@
         <title><?php echo $this->pageTitle ?></title>
         <meta name="description" content="<?php echo $this->pageDescription ?>">
         <meta name="keywords" content="<?php echo $this->pageKeywords ?>">
+        <meta name="theme-color" content="#e75d5d" />
 
         <?php require('metas-head.php');?>
     </head>
