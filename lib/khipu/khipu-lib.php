@@ -37,7 +37,7 @@ function khipu_get_new_payment($email, $bankId, $precio, $id_transaction) {
 	$receiver_id = RECEIVER_ID;
 	$secret = SECRET;
 
-	$subject = 'Inscripción Curso.php';
+	$subject = 'Inscripción Curso';
 	$body = 'Este es un pago correspondiente a la inscripción del curso Cognitivo. Te enviaremos un correo de confirmación a penas validemos tu inscripción.';
 	$bank_id = $bankId;
 	$amount = $precio;

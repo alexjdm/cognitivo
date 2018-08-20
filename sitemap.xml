@@ -6,86 +6,94 @@
 		http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 	<url>
-		<loc>http://cognitivo.cl/</loc>
+		<loc>https://cognitivo.cl/</loc>
 		<lastmod>2017-04-29T19:00:30+00:00</lastmod>
 	</url>
 	<url>
-		<loc>http://cognitivo.cl/equipo/</loc>
+		<loc>https://cognitivo.cl/equipo/</loc>
 		<lastmod>2017-04-29T18:57:40+00:00</lastmod>
 	</url>
 	<url>
-		<loc>http://cognitivo.cl/ados/</loc>
+		<loc>https://cognitivo.cl/ados/</loc>
 		<lastmod>2017-04-29T18:57:40+00:00</lastmod>
 	</url>
 	<url>
-		<loc>http://cognitivo.cl/blog/</loc>
+		<loc>https://cognitivo.cl/blog/</loc>
 		<lastmod>2016-02-06T18:59:38+00:00</lastmod>
 	</url>
 	<url>
-		<loc>http://cognitivo.cl/blog/cuanto-tiempo-uso-chupete/</loc>
+		<loc>https://cognitivo.cl/blog/cuanto-tiempo-uso-chupete/</loc>
 		<lastmod>2016-02-06T18:59:38+00:00</lastmod>
 	</url>
 	<url>
-		<loc>http://cognitivo.cl/blog/fenomeno-causa-efecto-bebe/</loc>
+		<loc>https://cognitivo.cl/blog/fenomeno-causa-efecto-bebe/</loc>
 		<lastmod>2016-02-06T18:59:39+00:00</lastmod>
 	</url>
 	<url>
-		<loc>http://www.cognitivo.cl/blog/aporte-terapeuta-ocupacional/</loc>
+		<loc>https://www.cognitivo.cl/blog/aporte-terapeuta-ocupacional/</loc>
 		<lastmod>2017-08-30T18:59:39+00:00</lastmod>
 	</url>
 	<url>
-		<loc>http://www.cognitivo.cl/blog/que-es-la-psicopedagogia/</loc>
+		<loc>https://www.cognitivo.cl/blog/que-es-la-psicopedagogia/</loc>
 		<lastmod>2017-10-16T18:59:39+00:00</lastmod>
 	</url>
 	<url>
-		<loc>http://www.cognitivo.cl/blog/que-es-la-fonoaudiologia/</loc>
+		<loc>https://www.cognitivo.cl/blog/que-es-la-fonoaudiologia/</loc>
 		<lastmod>2017-10-20T18:59:39+00:00</lastmod>
 	</url>
 	<url>
-		<loc>http://www.cognitivo.cl/blog/tramites-tea/</loc>
+		<loc>https://www.cognitivo.cl/blog/tramites-tea/</loc>
 		<lastmod>2017-11-27T18:59:39+00:00</lastmod>
 	</url>
 	<url>
-		<loc>http://www.cognitivo.cl/blog/integracion-sensorial/</loc>
+		<loc>https://www.cognitivo.cl/blog/integracion-sensorial/</loc>
 		<lastmod>2018-01-04T18:59:39+00:00</lastmod>
 	</url>
 	<url>
-		<loc>http://www.cognitivo.cl/blog/juego-terapias/</loc>
+		<loc>https://www.cognitivo.cl/blog/juego-terapias/</loc>
 		<lastmod>2018-01-22T22:59:39+00:00</lastmod>
 	</url>
 	<url>
-		<loc>http://www.cognitivo.cl/blog/por-que-mi-hijo-no-tolera-alimentos/</loc>
+		<loc>https://www.cognitivo.cl/blog/por-que-mi-hijo-no-tolera-alimentos/</loc>
 		<lastmod>2018-05-10T19:39:38+00:00</lastmod>
 	</url>
 	<url>
-		<loc>http://www.cognitivo.cl/blog/como-me-comunico-con-mi-hijo-si-no-habla/</loc>
+		<loc>https://www.cognitivo.cl/blog/como-me-comunico-con-mi-hijo-si-no-habla/</loc>
 		<lastmod>2018-06-06T19:31:38+00:00</lastmod>
 	</url>
 	<url>
-		<loc>http://www.cognitivo.cl/blog/desarrollo-habilidades-y-aprendizajes-escolares/</loc>
+		<loc>https://www.cognitivo.cl/blog/desarrollo-habilidades-y-aprendizajes-escolares/</loc>
 		<lastmod>2018-07-04T00:01:20+00:00</lastmod>
 	</url>
+	<url>
+		<loc>https://www.cognitivo.cl/blog/ayuda-hijos-enfermedades-respiratorias/</loc>
+		<lastmod>2018-08-13T00:41:20+00:00</lastmod>
+	</url>
 
 
 	<url>
-		<loc>http://www.cognitivo.cl/curso-tea-manejo-conductas-complejas/</loc>
+		<loc>https://www.cognitivo.cl/curso-tea-manejo-conductas-complejas/</loc>
 		<lastmod>2018-03-01T18:59:38+00:00</lastmod>
 	</url>
 	<url>
-		<loc>http://www.cognitivo.cl/curso-dificultades-sensoriales-red-sensorial/</loc>
+		<loc>https://www.cognitivo.cl/curso-dificultades-sensoriales-red-sensorial/</loc>
 		<lastmod>2018-03-01T18:59:38+00:00</lastmod>
 	</url>
 	<url>
-		<loc>http://www.cognitivo.cl/curso-integracion-sensorial-alimentacion/</loc>
+		<loc>https://www.cognitivo.cl/curso-integracion-sensorial-alimentacion/</loc>
 		<lastmod>2018-04-28T15:59:38+00:00</lastmod>
 	</url>
 	<url>
-		<loc>http://www.cognitivo.cl/curso-como-ayudar-hijos-comunicarse/</loc>
+		<loc>https://www.cognitivo.cl/curso-como-ayudar-hijos-comunicarse/</loc>
 		<lastmod>2018-05-27T15:31:38+00:00</lastmod>
 	</url>
 	<url>
-		<loc>http://www.cognitivo.cl/curso-desarrollo-habilidades-escolares/</loc>
+		<loc>https://www.cognitivo.cl/curso-desarrollo-habilidades-escolares/</loc>
 		<lastmod>2018-07-03T23:31:38+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://www.cognitivo.cl/curso-ayuda-hijos-enfermedades-respiratorias/</loc>
+		<lastmod>2018-08-13T10:51:38+00:00</lastmod>
 	</url>
 
 </urlset>

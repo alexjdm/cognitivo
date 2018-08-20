@@ -27,12 +27,12 @@
                 <div class="item active">
                     <div class="col-md-7 col-sm-7 col-xs-12 divizq-curso">
                         <h4 class="tituloBannerH4">Curso para Padres:</h4>
-                        <h1 class="tituloBannerH1" style="font-family: Dosis; font-size: 28pt;">DESARROLLO DE HABILIDADES Y APRENDIZAJES ESCOLARES</h1>
+                        <h1 class="tituloBannerH1" style="font-family: Dosis; font-size: 28pt;">MEDIDAS PARA MITIGAR Y CONTROLAR LOS EFECTOS DE UNA INFECCIÓN RESPIRATORIA</h1>
                         <h4 class="tituloBannerH4" style="margin-top: 2%;">¡Cupos Limitados! No te lo pierdas</h4>
-                        <a class="btn btn-primary btnInscribir-curso1" href="curso-desarrollo-habilidades-escolares/">INSCRÍBETE</a>
+                        <a class="btn btn-primary btnInscribir-curso1" href="curso-ayuda-hijos-enfermedades-respiratorias/">INSCRÍBETE</a>
 
                         <div class="col-md-12 curso1-horarios">
-                            <p style="display: inline"><img src="dist/images/calendar.png" width="20px"> 14 juLio 2018</p>
+                            <p style="display: inline"><img src="dist/images/calendar.png" width="20px"> 1 septiembre 2018</p>
                             <p style="display: inline"><img src="dist/images/time.png" width="20px"> 10 - 12 hrs.</p>
                         </div>
 
@@ -570,99 +570,3 @@
     </section>
 
     <!-- ========== CONTACT END ========== -->
-
-    <!-- ========== MAP START ========== -->
-
-    <!-- Google Map Script -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoRMxiPsqJ9SUuaK1KsCAjd3gqnecjlBw"></script>
-    <script type="text/javascript">
-
-        function initialize() {
-
-            // Create an array of styles.
-            var styles = [
-                {
-                    stylers: [
-                        { hue: "#e75d5d" },
-                        { saturation: 0 }
-                    ]
-                },{
-                    featureType: "road",
-                    elementType: "geometry",
-                    stylers: [
-                        { lightness: 100 },
-                        { visibility: "simplified" }
-                    ]
-                },{
-                    featureType: "road",
-                    elementType: "labels",
-                    stylers: [
-                        { visibility: "off" }
-                    ]
-                }
-            ];
-
-            // Create a new StyledMapType object, passing it the array of styles,
-            // as well as the name to be displayed on the map type control.
-            var styledMap = new google.maps.StyledMapType(styles,
-                {name: "Styled Map"});
-
-            var mapOptions = {
-                zoom: 12,
-                center: new google.maps.LatLng(-33.55274885, -70.5775361),
-                mapTypeControlOptions: {
-                    mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
-                }
-            };
-
-            var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
-            //Associate the styled map with the MapTypeId and set it to display.
-            map.mapTypes.set('map_style', styledMap);
-            map.setMapTypeId('map_style');
-
-            setMarkers(map, places);
-        }
-
-        var places = [
-            ['Cognitivo Puente Alto', -33.5836314, -70.5508148, 1],
-            ['Cognitivo La Florida', -33.5218663, -70.6042574, 1]
-        ];
-
-        function setMarkers(map, locations) {
-            // Add markers to the map
-            var image = {
-                url: 'dist/images/marker.png',
-                // This marker is 40 pixels wide by 42 pixels tall.
-                size: new google.maps.Size(40, 42),
-                // The origin for this image is 0,0.
-                origin: new google.maps.Point(0,0),
-                // The anchor for this image is the base of the pin at 20,42.
-                anchor: new google.maps.Point(15, 42)
-            };
-
-            for (var i = 0; i < locations.length; i++) {
-                var place = locations[i];
-                var myLatLng = new google.maps.LatLng(place[1], place[2]);
-                var marker = new google.maps.Marker({
-                    position: myLatLng,
-                    map: map,
-                    icon: image,
-                    title: place[0],
-                    zIndex: place[3],
-                    animation: google.maps.Animation.DROP
-                });
-
-                var contentString = "Some content";
-                google.maps.event.addListener(marker, "click", function() {
-                    infowindow.setContent(this.html);
-                    infowindow.open(map, this);
-                });
-            }
-        }
-
-        google.maps.event.addDomListener(window, 'load', initialize);
-
-    </script>
-
-    <div id="map-canvas"></div>

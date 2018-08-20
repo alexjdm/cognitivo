@@ -75,6 +75,7 @@ $controllers = array(
         'cursointegracionsensorialalimentacion', 'cursointegracionsensorialalimentacionprocess', 'cursointegracionsensorialalimentacionfinish', 'cursointegracionsensorialalimentacionnotifyjs',
         'cursocomoayudarhijoscomunicarse', 'cursocomoayudarhijoscomunicarseprocess', 'cursocomoayudarhijoscomunicarsefinish', 'cursocomoayudarhijoscomunicarsenotifyjs',
         'cursodesarrollohabilidadesescolares', 'cursodesarrollohabilidadesescolaresprocess', 'cursodesarrollohabilidadesescolaresfinish', 'cursodesarrollohabilidadesescolaresnotifyjs',
+        'cursoayudahijosenfermedadesrespiratorias', 'cursoayudahijosenfermedadesrespiratoriasprocess', 'cursoayudahijosenfermedadesrespiratoriasfinish', 'cursoayudahijosenfermedadesrespiratoriasnotifyjs',
         'error'],
     'blog' => ['index', 'cuantotiempousochupete', 'fenomenocausaefectobebe', 'aporteterapeutaocupacional', 'queeslapsicopedagogia',
         'queeslafonoaudiologia', 'tramitestea', 'integracionsensorial', 'juegoterapias', 'porquemihijonotoleraalimentos',
