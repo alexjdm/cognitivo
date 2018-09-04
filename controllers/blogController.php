@@ -1,5 +1,6 @@
 <?php
 
+require_once ("businesslogic/Entrada.php");
 
 class blogController {
 
@@ -16,6 +17,9 @@ class blogController {
         $this->page = 'views/blog/index.php';
         $this->navbar = 'navbar-interior.php';
         $this->navbarfooter = 'navbar-footer.php';
+
+        $entradaBusiness = new Entrada();
+        $entradas = $entradaBusiness->getAll();
 
         require_once('views/layout.php');
     }

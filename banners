@@ -93,6 +93,35 @@
             </div>
 
 
+            <div class="carousel-inner">
+
+                            <div class="item active">
+                                <div class="col-md-7 col-sm-7 col-xs-12 divizq-curso">
+                                    <h4 class="tituloBannerH4">Curso para Padres:</h4>
+                                    <h1 class="tituloBannerH1" style="font-family: Dosis; font-size: 28pt;">MEDIDAS PARA MITIGAR Y CONTROLAR LOS EFECTOS DE UNA INFECCIÓN RESPIRATORIA</h1>
+                                    <h4 class="tituloBannerH4" style="margin-top: 2%;">¡Cupos Limitados! No te lo pierdas</h4>
+                                    <a class="btn btn-primary btnInscribir-curso1" href="curso-ayuda-hijos-enfermedades-respiratorias/">INSCRÍBETE</a>
+
+                                    <div class="col-md-12 curso1-horarios">
+                                        <p style="display: inline"><img src="dist/images/calendar.png" width="20px"> 1 septiembre 2018</p>
+                                        <p style="display: inline"><img src="dist/images/time.png" width="20px"> 10 - 12 hrs.</p>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-5 col-sm-5 col-xs-12 back-curso non-display-responsive">
+
+                                </div>
+                                <div class="col-md-5 col-sm-5 col-xs-12 display-responsive" style="background-color: #FFFFFF">
+                                    <center>
+                                        <h3>Organiza:</h3>
+                                        <img src="dist/images/logo-hor.png" width="100px">
+                                    </center>
+                                </div>
+                            </div>
+
+                        </div>
+
+
 
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->

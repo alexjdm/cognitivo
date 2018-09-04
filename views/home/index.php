@@ -12,56 +12,54 @@
         }
     </style>
 
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <!--<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>-->
-            </ol>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <!--<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>-->
+        </ol>
 
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
 
-                <div class="item active">
-                    <div class="col-md-7 col-sm-7 col-xs-12 divizq-curso">
-                        <h4 class="tituloBannerH4">Curso para Padres:</h4>
-                        <h1 class="tituloBannerH1" style="font-family: Dosis; font-size: 28pt;">MEDIDAS PARA MITIGAR Y CONTROLAR LOS EFECTOS DE UNA INFECCIÓN RESPIRATORIA</h1>
-                        <h4 class="tituloBannerH4" style="margin-top: 2%;">¡Cupos Limitados! No te lo pierdas</h4>
-                        <a class="btn btn-primary btnInscribir-curso1" href="curso-ayuda-hijos-enfermedades-respiratorias/">INSCRÍBETE</a>
+            <div class="item active">
+                <div class="background-nino" style=" height: 100vh;">
+                    <div class="col-md-7 col-sm-7 col-xs-12">
+                    <h4 class="tituloBannerH4">Nuevo curso para profesionales:</h4>
+                    <h1 class="tituloBannerH2">TEA: NUEVAS ESTRATEGIAS DE INTERVENCIÓN MULTIDISCIPLINARIA.</h1>
+                    <h3 class="tituloBannerH3">Santiago, Chile</h3>
+                    <h4 class="tituloBannerH5">Participa del curso para profesionales con los especialistas de Red Sensorial.</h4>
+                    <a class="btn btn-primary btnInscribir-curso1" href="curso-red-sensorial-tea-nuevas-estrategias/">INSCRÍBETE</a>
 
-                        <div class="col-md-12 curso1-horarios">
-                            <p style="display: inline"><img src="dist/images/calendar.png" width="20px"> 1 septiembre 2018</p>
-                            <p style="display: inline"><img src="dist/images/time.png" width="20px"> 10 - 12 hrs.</p>
-                        </div>
-
+                    <div class="col-md-12 curso1-horarios">
+                        <p style="display: inline"><img src="dist/images/calendar.png" width="20px"> 5 y 6 de octubre 2018</p>
+                        <p style="display: inline"><img src="dist/images/time.png" width="20px"> 9 - 17 hrs.</p>
                     </div>
-                    <div class="col-md-5 col-sm-5 col-xs-12 back-curso non-display-responsive">
 
-                    </div>
-                    <div class="col-md-5 col-sm-5 col-xs-12 display-responsive" style="background-color: #FFFFFF">
-                        <center>
-                            <h3>Organiza:</h3>
-                            <img src="dist/images/logo-hor.png" width="100px">
-                        </center>
-                    </div>
                 </div>
 
+                <div class="col-md-5 col-sm-5 col-xs-12">
+                    <img src="dist/images/Expositores.png" class="expositores">
+                </div>
+                </div>
             </div>
 
-            <!--
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-                <span class="sr-only">Next</span>
-            </a>
-            -->
-
         </div>
+
+        <!--
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+        -->
+
+    </div>
 
 
 
@@ -446,88 +444,29 @@
             </div>
             <div class="row-margin owl-carousel">
 
+                <?php foreach ($entradas as $entrada): ?>
+
                 <div class="item">
                     <div class="post">
-                        <h3 class="entry-title">¿Por qué mi hijo juega en las sesiones de terapia?</h3>
+                        <h3 class="entry-title"><?php echo utf8_encode($entrada['TITULO']); ?></h3>
                         <div class="entry-meta">
-                            <span class="date"><i class="fa fa-calendar"></i>Enero 21, 2018</span>
-                            <span class="author"><i class="fa fa-user"></i>Por Equipo Cognitivo</span>
+                            <span class="date"><i class="fa fa-calendar"></i><?php echo $entrada['FECHA']; ?></span>
+                            <span class="author"><i class="fa fa-user"></i>Por <?php echo utf8_encode($entrada['AUTOR']); ?></span>
                         </div>
                         <div class="post-thumb">
-                            <img src="dist/images/blog/juego-terapias.jpg" alt="Juego en terapias" class="img-responsive" />
+                            <img src="<?php echo $entrada['URL_IMAGEN']; ?>" alt="<?php echo utf8_encode($entrada['ALT_IMAGEN']); ?>" class="img-responsive" />
                         </div>
                         <div class="entry-content">
-                            <p>El juego es por excelencia el lenguaje de las niñas y los niños, es una actividad común y cercana que, quita la ansiedad en los espacios terapéuticos...</p>
+                            <p><?php echo utf8_encode($entrada['DESCRIPCION']); ?></p>
                         </div>
                         <div class="post-more">
-                            <a href="blog/juego-terapias/" class="btn btn-primary">LEER MÁS</a>
+                            <a href="<?php echo $entrada['URL']; ?>" class="btn btn-primary">LEER MÁS</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="item">
-                    <div class="post">
-                        <h3 class="entry-title">¿Qué significa que mi hijo tenga dificultades en el procesamiento sensorial?</h3>
-                        <div class="entry-meta">
-                            <span class="date"><i class="fa fa-calendar"></i>Enero 4, 2018</span>
-                            <span class="author"><i class="fa fa-user"></i>Por Equipo Cognitivo</span>
-                        </div>
-                        <div class="post-thumb">
-                            <img src="dist/images/blog/integracion-sensorial.jpg" alt="Integración sensorial" class="img-responsive" />
-                        </div>
-                        <div class="entry-content">
-                            <p>Un artículo que explica y detalla que es un Trastorno del Procesamiento Sensorial y como se trabaja la integración sensorial. Se entregan tips de cuando es conveniente acudir a un especialista.</p>
-                        </div>
-                        <div class="post-more">
-                            <a href="blog/integracion-sensorial/" class="btn btn-primary">LEER MÁS</a>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach; ?>
 
-                <!--<div class="item">
-                    <div class="post">
-                        <h2 class="entry-title">¿Cuánto tiempo se debe usar el chupete?</h2>
-                        <div class="entry-meta">
-                            <span class="date"><i class="fa fa-calendar"></i>Febrero 7, 2015</span>
-                            <span class="author"><i class="fa fa-user"></i>Por Equipo Cognitivo</span>
-                        </div>
-                        <div class="post-thumb">
-
-                            <div id="banner" class="carousel slide">
-
-                                <ol class="carousel-indicators">
-                                    <li data-target="#banner" data-slide-to="0" class="active"></li>
-                                    <li data-target="#banner" data-slide-to="1"></li>
-                                    <li data-target="#banner" data-slide-to="2"></li>
-                                    <li data-target="#banner" data-slide-to="3"></li>
-                                </ol>
-
-                                <div class="carousel-inner">
-                                    <div class="item active">
-                                        <img src="dist/images/bebe-chupete-01.png" alt="Bebé con chupete y su madre" title="" />
-                                    </div>
-                                    <div class="item">
-                                        <img src="dist/images/bebe-chupete-02.png" alt="Bebé con chupete" title="" />
-                                    </div>
-                                    <div class="item">
-                                        <img src="dist/images/bebe-chupete-03.png" alt="Bebé deja el chupete" title="" />
-                                    </div>
-                                </div>
-
-                                <a class="left carousel-control" href="#banner" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-                                <a class="right carousel-control" href="#banner" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-
-                            </div>
-
-                        </div>
-                        <div class="entry-content">
-                            <p>Las ventajas y desventajas del uso del chupete.</p>
-                        </div>
-                        <div class="post-more">
-                            <a href="cuanto-tiempo-uso-chupete.html" class="btn btn-primary">LEER MÁS</a>
-                        </div>
-                    </div>-->
-                </div>
             </div>
             <hr>
         </div>

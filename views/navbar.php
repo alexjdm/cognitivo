@@ -7,7 +7,9 @@
                 <span class="icon-bar"></span>
             </button>
             <meta itemprop="image" content="http://www.cognitivo.cl/">
-            <a href="/"><img src="dist/images/logo-hor.png" alt="Logo Cognitivo" title="Cognitivo" class="img-responsive" style="margin-top: 10px;"/></a>
+            <a href="/">
+                <img src="dist/images/LOGOCOGNITIVO.svg" alt="Logo Cognitivo" title="Cognitivo" class="img-responsive" style="margin-top: 15px; width: 200px;" />
+            </a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -19,11 +21,12 @@
                         <li><a href="#mission">Misión</a></li>
                         <li><a href="#activities">Talleres</a></li>
                         <li><a href="#gallery">Espacios terapéuticos</a></li>
-                        <li><a href="equipo/">Equipo</a></li>
+                        <li><a href="#membership">Valores</a></li>
+                        <!--<li><a href="equipo/">Equipo</a></li>-->
                     </ul>
                 </li>
-                <li><a href="#membership">VALORES</a></li>
                 <li><a href="ados/">ADOS-2</a></li>
+                <!--<li><a href="capacitaciones/">CURSOS</a></li>-->
                 <li><a href="blog/">BLOG</a></li>
                 <li><a href="#contact">CONTACTO</a></li>
                 <li>

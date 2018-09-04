@@ -1,6 +1,6 @@
 <header class="background ados-image background-purple">
     <div class="container">
-        <div class="row no-fade ados-banner">
+        <div class="row no-fade cognitivo-banner">
             <div class="col-sm-7">
                 <h1 style="font-family: Bariol, Helvetica; margin: 10px 0; font-size:48px; color: #e75d5d">¿Cómo saber si mi hijo tiene transtorno del espectro autista?</h1>
                 <h3 style="font-family: Bariol, Helvetica; margin-top: 5px; font-size:20px; color: #e75d5d">En Cognitivo realizamos la evaluación ADOS 2 que permite resolver esta duda.</h3>
@@ -35,12 +35,12 @@
             <div class="col-sm-4 txt-center">
                 <a target="_blank" href="https://goo.gl/maps/8VaVFkhMHDK2"><i class="fa fa-3x fa-map-marker" aria-hidden="true"></i></a>
                 <h3>¿Dónde?</h3>
-                <p>En nuestro centro ubicado en Canela Alta 2803, Puente Alto.</p>
+                <p>En nuestros centros ubicados en Canela Alta 2803, Puente Alto o María Elvira 128, La Florida.</p>
             </div>
             <div class="col-sm-4 txt-center">
                 <i class="fa fa-3x fa-clock-o" aria-hidden="true" style="color: #e03131;"></i>
                 <h3>Horarios</h3>
-                <p>Lunes a Sábados.</p>
+                <p>Lunes a Sábados entre las 9 y las 21 hrs.</p>
             </div>
             <div class="col-sm-4 txt-center">
                 <i class="fa fa-3x fa-money" aria-hidden="true" style="color: #e03131;"></i>

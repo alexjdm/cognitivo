@@ -19,11 +19,12 @@
                         <li><a href="index.php#mission">Misión</a></li>
                         <li><a href="index.php#activities">Talleres</a></li>
                         <li><a href="index.php#gallery">Espacios terapéuticos</a></li>
-                        <li><a href="equipo/">Equipo</a></li>
+                        <li><a href="index.php#membership">Valores</a></li>
+                        <!--<li><a href="equipo/">Equipo</a></li>-->
                     </ul>
                 </li>
-                <li><a href="index.php#membership">VALORES</a></li>
                 <li><a href="ados/">ADOS-2</a></li>
+                <!--<li><a href="capacitaciones/">CURSOS</a></li>-->
                 <li><a href="blog/">BLOG</a></li>
                 <li><a href="index.php#contact">CONTACTO</a></li>
                 <li>

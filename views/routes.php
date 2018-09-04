@@ -69,13 +69,14 @@ function call($controller, $action, $post) {
 // just a list of the controllers we have and their actions
 // we consider those "allowed" values
 $controllers = array(
-    'home' => ['index', 'ados', 'equipo', 'condicionesplanes',
+    'home' => ['index', 'ados', 'equipo', 'condicionesplanes', 'capacitaciones',
         'cursoteamanejoconductascomplejas', 'cursoteamanejoconductascomplejasprocess', 'cursoteamanejoconductascomplejasfinish', 'cursoteamanejoconductascomplejasnotifyjs',
         'cursodificultadessensorialesredsensorial', 'cursodificultadessensorialesredsensorialprocess', 'cursodificultadessensorialesredsensorialfinish', 'cursodificultadessensorialesredsensorialnotifyjs',
         'cursointegracionsensorialalimentacion', 'cursointegracionsensorialalimentacionprocess', 'cursointegracionsensorialalimentacionfinish', 'cursointegracionsensorialalimentacionnotifyjs',
         'cursocomoayudarhijoscomunicarse', 'cursocomoayudarhijoscomunicarseprocess', 'cursocomoayudarhijoscomunicarsefinish', 'cursocomoayudarhijoscomunicarsenotifyjs',
         'cursodesarrollohabilidadesescolares', 'cursodesarrollohabilidadesescolaresprocess', 'cursodesarrollohabilidadesescolaresfinish', 'cursodesarrollohabilidadesescolaresnotifyjs',
         'cursoayudahijosenfermedadesrespiratorias', 'cursoayudahijosenfermedadesrespiratoriasprocess', 'cursoayudahijosenfermedadesrespiratoriasfinish', 'cursoayudahijosenfermedadesrespiratoriasnotifyjs',
+        'cursoredsensorialteanuevasestrategias', 'cursoredsensorialteanuevasestrategiasprocess', 'cursoredsensorialteanuevasestrategiasfinish', 'cursoredsensorialteanuevasestrategiasnotifyjs',
         'error'],
     'blog' => ['index', 'cuantotiempousochupete', 'fenomenocausaefectobebe', 'aporteterapeutaocupacional', 'queeslapsicopedagogia',
         'queeslafonoaudiologia', 'tramitestea', 'integracionsensorial', 'juegoterapias', 'porquemihijonotoleraalimentos',
