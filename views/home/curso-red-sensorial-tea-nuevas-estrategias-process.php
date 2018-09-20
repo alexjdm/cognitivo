@@ -13,7 +13,6 @@
 
                 <h1 class="inline" style="font-family: 'Bariol Regular'; margin-bottom: 0;: ">2 x $160.000 <span class="inline tachado" style="font-size: 12pt;">$100.000 CLP c/u</span></h1>
                 <p>Esta oferta termina este jueves 14 de septiembre</p>
-                <button id="botonGoToInscripcion" data-id="inscripcionAutismoProblemasAlimentacion" class="btn btn-default" onclick="goToByScroll($(this).data('id'))">Inscribirse</button>
             </div>
         </div>
     </div>
@@ -30,6 +29,9 @@
 				<form class="form-horizontal" role="form" method="post" onsubmit="document.getElementById('nombreBanco').value=document.getElementById('bankId').options[document.getElementById('bankId').selectedIndex].text;">
 
                     <center>
+
+                        <?php if($tipoInscripcion == 1): ?>
+
                         <table border="0" cellpadding="3" cellspacing="3" style="width:70%; margin-bottom:20px; margin-top:20px;">
                             <tr>
                                 <td>
@@ -97,6 +99,178 @@
                                 </td>
                             </tr>
                         </table>
+
+                        <?php else: ?>
+
+                            <table border="0" cellpadding="3" cellspacing="3" style="width:70%; margin-bottom:20px; margin-top:20px;">
+                                <tr>
+                                    <td>
+                                        <label for="email" class="col-sm-6">Ocupación</label>
+                                        <div class="col-sm-6">
+                                            <?php if($ocupacion == 1) { echo "Profesional";  } else { echo "Estudiante"; }; ?>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <label for="bankId" class="col-sm-6">Banco</label>
+                                        <div class="col-sm-6">
+                                            <?php echo $nombreBanco ?>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <?php if($name1 != null && $name1 != ""): ?>
+                                    <tr><td colspan="2">Participante 1</td></tr>
+                                <tr>
+                                    <td>
+                                        <label for="nombre" class="col-sm-6">Nombre</label>
+                                        <div class="col-sm-6">
+                                            <?php echo $name1 ?>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <label for="rut" class="col-sm-6">Rut</label>
+                                        <div class="col-sm-6">
+                                            <?php echo $rut1 ?>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="email" class="col-sm-6">Email</label>
+                                        <div class="col-sm-6">
+                                            <?php echo $email1 ?>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <label for="telefono" class="col-sm-6">Celular</label>
+                                        <div class="col-sm-6">
+                                            <?php echo $phone1 ?>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="pago" class="col-sm-6"><?php if($ocupacion == 1) { echo "Titulo";  } else { echo "Carrera"; }; ?></label>
+                                        <div class="col-sm-6">
+                                            <?php echo $carrera1; ?>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <label for="email" class="col-sm-6">Comuna</label>
+                                        <div class="col-sm-6">
+                                            <?php echo $comuna1; ?>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <?php endif; ?>
+
+                                <?php if($name2 != null && $name2 != ""): ?>
+                                    <tr><td colspan="2">Participante 2</td></tr>
+                                    <tr>
+                                        <td>
+                                            <label for="nombre" class="col-sm-6">Nombre</label>
+                                            <div class="col-sm-6">
+                                                <?php echo $name2 ?>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <label for="rut" class="col-sm-6">Rut</label>
+                                            <div class="col-sm-6">
+                                                <?php echo $rut2 ?>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="email" class="col-sm-6">Email</label>
+                                            <div class="col-sm-6">
+                                                <?php echo $email2 ?>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <label for="telefono" class="col-sm-6">Celular</label>
+                                            <div class="col-sm-6">
+                                                <?php echo $phone2 ?>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="pago" class="col-sm-6"><?php if($ocupacion == 1) { echo "Titulo";  } else { echo "Carrera"; }; ?></label>
+                                            <div class="col-sm-6">
+                                                <?php echo $carrera2; ?>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <label for="email" class="col-sm-6">Comuna</label>
+                                            <div class="col-sm-6">
+                                                <?php echo $comuna2; ?>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                <?php endif; ?>
+                                <?php if($name3 != null && $name3 != ""): ?>
+                                    <tr><td colspan="2">Participante 3</td></tr>
+                                    <tr>
+                                        <td>
+                                            <label for="nombre" class="col-sm-6">Nombre</label>
+                                            <div class="col-sm-6">
+                                                <?php echo $name3 ?>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <label for="rut" class="col-sm-6">Rut</label>
+                                            <div class="col-sm-6">
+                                                <?php echo $rut3 ?>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="email" class="col-sm-6">Email</label>
+                                            <div class="col-sm-6">
+                                                <?php echo $email3 ?>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <label for="telefono" class="col-sm-6">Celular</label>
+                                            <div class="col-sm-6">
+                                                <?php echo $phone3 ?>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="pago" class="col-sm-6"><?php if($ocupacion == 1) { echo "Titulo";  } else { echo "Carrera"; }; ?></label>
+                                            <div class="col-sm-6">
+                                                <?php echo $carrera3; ?>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <label for="email" class="col-sm-6">Comuna</label>
+                                            <div class="col-sm-6">
+                                                <?php echo $comuna3; ?>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                <?php endif; ?>
+
+                                <tr>
+                                    <td>Total</td>
+                                    <td>
+                                        <label for="monto" class="col-sm-6">Monto</label>
+                                        <div class="col-sm-6">
+                                            <?php echo "$ " . number_format($precio, 0, ",", "."); ?>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        <?php endif; ?>
+
                     </center>
 
 					<div class="col-md-12">

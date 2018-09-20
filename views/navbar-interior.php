@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
             </button>
             <meta itemprop="image" content="http://www.cognitivo.cl/">
-            <a href="/"><img src="dist/images/logo-hor.png" alt="Logo Cognitivo" title="Cognitivo" class="img-responsive" style="margin-top: 10px;"/></a>
+            <a href="/"><img src="dist/images/LOGOCOGNITIVO.svg" alt="Logo Cognitivo" title="Cognitivo" class="img-responsive" style="margin-top: 15px; width: 200px;" /></a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">

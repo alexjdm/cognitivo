@@ -28,7 +28,7 @@
 <!-- jQuery Settings -->
 <script src="dist/js/settings.min.js"></script>
 
-<meta itemprop="url" content="http://www.cognitivo.cl/"></span>
+<meta itemprop="url" content="https://www.cognitivo.cl/"></span>
 
 <script>
 

@@ -45,7 +45,7 @@ function khipu_get_new_payment($email, $bankId, $precio, $id_transaction) {
 	$notify_url = NOTIFY_URL;
 	$return_url = RETURN_URL;
 	$cancel_url = '';
-	$picture_url = 'http://www.cognitivo.cl/dist/images/logo-hor.png';
+	$picture_url = 'https://www.cognitivo.cl/dist/images/LOGOCOGNITIVO.svg';
 	$transaction_id = $id_transaction;
 	$custom = $email;
 

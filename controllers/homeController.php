@@ -882,23 +882,83 @@ EOF;
         $this->navbar = 'navbar-interior.php';
         $this->navbarfooter = 'navbar-footer.php';
 
-        $name		= sanear_string($_POST['name']);
-        $rut		= $_POST['rut'];
-        $email 		= $_POST['email'];
-        $phone 		= $_POST['phone'];
-        $comuna 	= $_POST['comuna'];
-        $ocupacion 	= "";
-        $carrera 	= "";
+        $tipoInscripcion 	= $_POST['tipoInscripcion'];
         $id_transaccion 	= rand(10000, 99999);
-        $bankId 	= $_POST['bankId'];
-        $nombreBanco 	= $_POST['nombreBanco'];
-
-        $precio		= 100000;
         $idCurso	= 9;
+        $email = '';
+        $bankId = '';
 
-        if (!filter_var($_REQUEST['email'], FILTER_VALIDATE_EMAIL)) {
-            header('Location: index.php?invalid=true');
-            return;
+        if($tipoInscripcion == 1)
+        {
+            $bankId 	= $_POST['bankId'];
+            $nombreBanco 	= $_POST['nombreBanco'];
+            $name		= sanear_string($_POST['name']);
+            $rut		= $_POST['rut'];
+            $email 		= $_POST['email'];
+            $phone 		= $_POST['phone'];
+            $comuna 	= $_POST['comuna'];
+            $ocupacion 	= $_POST['ocupacion'];
+            $carrera 	= $_POST['carrera'];
+
+            $precio	= 100000;
+            if($ocupacion == 2){ //Precio estudiante
+                $precio	= 80000;
+            }
+        }
+        else
+        {
+            $ocupacion 	= $_POST['ocupacion1'];
+            $bankId 	= $_POST['bankId1'];
+            $nombreBanco 	= $_POST['nombreBanco1'];
+
+            $name1		= sanear_string($_POST['name1']);
+            $rut1		= $_POST['rut1'];
+            $email1 	= $_POST['email1'];
+            $phone1		= $_POST['phone1'];
+            $comuna1 	= $_POST['comuna1'];
+            $carrera1 	= $_POST['carrera1'];
+
+            $name2		= sanear_string($_POST['name2']);
+            $rut2		= $_POST['rut2'];
+            $email2 	= $_POST['email2'];
+            $phone2		= $_POST['phone2'];
+            $comuna2 	= $_POST['comuna2'];
+            $carrera2 	= $_POST['carrera2'];
+
+            $name3		= sanear_string($_POST['name3']);
+            $rut3		= $_POST['rut3'];
+            $email3 	= $_POST['email3'];
+            $phone3		= $_POST['phone3'];
+            $comuna3 	= $_POST['comuna3'];
+            $carrera3 	= $_POST['carrera3'];
+
+            $email = $email1;
+
+            $count = 0;
+            if($name1 != null && $name1 != "")
+                $count = $count + 1;
+            if($name2 != null && $name2 != "")
+                $count = $count + 1;
+            if($name3 != null && $name3 != "")
+                $count = $count + 1;
+
+            if($count >= 2)
+            {
+                $precio	= 80000;
+                if($ocupacion == 2){ //Precio estudiante
+                    $precio	= 60000;
+                }
+
+                $precio	= $precio * $count;
+            }
+            else
+            {
+                $precio	= 100000;
+                if($ocupacion == 2){ //Precio estudiante
+                    $precio	= 80000;
+                }
+            }
+
         }
 
         date_default_timezone_set("America/Santiago");
@@ -909,10 +969,33 @@ EOF;
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql = $pdo->prepare('INSERT INTO `inscritos`(`name`, `rut`, `email`, `phone`, `COMUNA`, `ocupacion`, `carrera`, `pagado`, `banco`, `precio`, `fecha`, `llamado`, `comentario`, `id_transaccion`, `ID_CURSO`) VALUES ("'.$name.'", "'.$rut.'", "'.$email.'", "'.$phone.'", "'.$comuna.'", "'.$ocupacion.'", "'.$carrera.'", "0", "'.$_REQUEST['nombreBanco'].'", "'.$precio.'", now(), "0", "", "'.$id_transaccion.'", "'.$idCurso.'")');
-        $sql->execute();
+        if($tipoInscripcion == 1)
+        {
+            $sql = $pdo->prepare('INSERT INTO `inscritos`(`name`, `rut`, `email`, `phone`, `COMUNA`, `ocupacion`, `carrera`, `pagado`, `banco`, `precio`, `fecha`, `llamado`, `comentario`, `id_transaccion`, `ID_CURSO`) VALUES ("'.$name.'", "'.$rut.'", "'.$email.'", "'.$phone.'", "'.$comuna.'", "'.$ocupacion.'", "'.$carrera.'", "0", "'.$nombreBanco.'", "'.$precio.'", now(), "0", "", "'.$id_transaccion.'", "'.$idCurso.'")');
+            $sql->execute();
+        }
+        else
+        {
+            if($name1 != null && $name1 != "")
+            {
+                $sql = $pdo->prepare('INSERT INTO `inscritos`(`name`, `rut`, `email`, `phone`, `COMUNA`, `ocupacion`, `carrera`, `pagado`, `banco`, `precio`, `fecha`, `llamado`, `comentario`, `id_transaccion`, `ID_CURSO`) VALUES ("'.$name1.'", "'.$rut1.'", "'.$email1.'", "'.$phone1.'", "'.$comuna1.'", "'.$ocupacion.'", "'.$carrera1.'", "0", "'.$nombreBanco.'", "'.$precio.'", now(), "0", "", "'.$id_transaccion.'", "'.$idCurso.'")');
+                $sql->execute();
+            }
+            if($name2 != null && $name2 != "")
+            {
+                $sql = $pdo->prepare('INSERT INTO `inscritos`(`name`, `rut`, `email`, `phone`, `COMUNA`, `ocupacion`, `carrera`, `pagado`, `banco`, `precio`, `fecha`, `llamado`, `comentario`, `id_transaccion`, `ID_CURSO`) VALUES ("'.$name2.'", "'.$rut2.'", "'.$email2.'", "'.$phone2.'", "'.$comuna2.'", "'.$ocupacion.'", "'.$carrera2.'", "0", "'.$nombreBanco.'", "'.$precio.'", now(), "0", "", "'.$id_transaccion.'", "'.$idCurso.'")');
+                $sql->execute();
+            }
+            if($name3 != null && $name3 != "")
+            {
+                $sql = $pdo->prepare('INSERT INTO `inscritos`(`name`, `rut`, `email`, `phone`, `COMUNA`, `ocupacion`, `carrera`, `pagado`, `banco`, `precio`, `fecha`, `llamado`, `comentario`, `id_transaccion`, `ID_CURSO`) VALUES ("'.$name3.'", "'.$rut3.'", "'.$email3.'", "'.$phone3.'", "'.$comuna3.'", "'.$ocupacion.'", "'.$carrera3.'", "0", "'.$nombreBanco.'", "'.$precio.'", now(), "0", "", "'.$id_transaccion.'", "'.$idCurso.'")');
+                $sql->execute();
+            }
+        }
 
-        $json = khipu_get_new_payment($_REQUEST['email'], $_REQUEST['bankId'], $precio, $id_transaccion);
+        $pdo = Database::disconnect();
+
+        $json = khipu_get_new_payment($email, $bankId, $precio, $id_transaccion);
         $data = urlencode($json);
 
         require_once('views/layout.php');
