@@ -16,11 +16,11 @@
 
             <?php if($vista == "profesionales") : ?>
                 <div class="form-group">
-                    <label class="col-sm-3 control-label" for="especialidad">Especialidad</label>
+                    <label class="col-sm-3 control-label" for="idEspecialidad">Especialidad</label>
                     <div class="col-sm-9">
-                        <select id="especialidad" class="form-control">
+                        <select id="idEspecialidad" class="form-control">
                             <?php foreach ($especialidades as $especialidad): ?>
-                                <option value="<?php echo $especialidad['ID_ESPECIALIDAD'] ?>" <?php if($especialidad['ID_ESPECIALIDAD'] == $usuario['ESPECIALIDAD']) { echo "selected"; } ?>><?php echo $especialidad['NOMBRE'] ?></option>
+                                <option value="<?php echo $especialidad['ID_ESPECIALIDAD'] ?>" <?php if($especialidad['ID_ESPECIALIDAD'] == $usuario['ID_ESPECIALIDAD']) { echo "selected"; } ?>><?php echo $especialidad['NOMBRE'] ?></option>
                             <?php endforeach; ?>
                         </select>
                     </div>
@@ -42,7 +42,7 @@
             <div class="form-group">
                 <label class="col-sm-3 control-label" for="fecha">Fecha Nacimiento</label>
                 <div class="col-sm-9">
-                    <input class="form-control" id="fecha" type="text" value="<?php echo utf8_encode($usuario['FECHA_NACIMIENTO']) ?>">
+                    <input class="form-control" id="fecha" type="text" value="<?php echo $usuario['FECHA_NACIMIENTO'] ?>">
                 </div>
             </div>
             <div class="form-group">
@@ -123,12 +123,14 @@
     });
 
     $('#saveUserEdit').click(function(){
-        var e = 'ajax.php?controller=User&action=editUser';
+        var e = 'index.php?controller=admin&action=editUser';
         var idUsuario = $("#idUsuario").val();
         var nombre = $("#nombre").val();
         var apellido = $("#apellido").val();
-        var especialidad = $("#especialidad").val();
+        var idEspecialidad = $("#idEspecialidad").val();
         var fecha = $("#fecha").val();
+        if(fecha === "")
+            fecha = null;
         var email = $("#email").val();
         var telefono1 = $("#telefono1").val();
         var telefono2 = $("#telefono2").val();
@@ -141,7 +143,7 @@
             idUsuario: idUsuario,
             nombre: nombre,
             apellido:apellido,
-            especialidad:especialidad,
+            idEspecialidad:idEspecialidad,
             fecha: fecha,
             email: email,
             telefono1: telefono1,
@@ -149,7 +151,7 @@
             direccion: direccion,
             perfil: perfil
         };
-        console.debug(dataSend);
+        //console.debug(dataSend);
 
         $.ajax({
             type: 'GET',
@@ -163,13 +165,13 @@
                 console.debug("success");
                 console.debug(data);
                 //var returnedData = JSON.parse(data); console.debug(returnedData);
-                if(data.status == "success"){
+                if(data.status === "success"){
                     console.debug("Login ok");
                     $('#messageEditUser').html('<div class="alert alert-success" role="alert"><strong>Listo! </strong>' + data.message + '</div>');
                     $('#saveUserEdit').html('<i class="fa fa-check" aria-hidden="true"></i> Listo');
                     $('#modalPrincipal').hide();
 
-                    window.location.href = "index.php?controller=User&action=" + vista;
+                    window.location.href = "index.php?controller=admin&action=" + vista;
                 }
                 else{
                     console.debug("Edit fail");
@@ -188,7 +190,7 @@
     });
 
     $('#changePassword').click(function(){
-        var url = 'ajax.php?controller=User&action=passwordUser'; console.debug(url);
+        var url = 'index.php?controller=admin&action=passwordUser'; console.debug(url);
         var idUsuario = $("#idUsuario").val(); console.debug(idUsuario);
         var data = { idUsuario:idUsuario };
         modal = $("#modalSubmodal");

@@ -1024,6 +1024,12 @@ footer li {
     /*background-size: 100%;*/
 }
 
+.background-curso10
+{
+    background-image: url('../images/fotoCurso10.jpg');
+    background-repeat: round;
+}
+
 .btnInscribir-curso1 {
     margin-left: 20%;
     margin-top: 4%;

@@ -35,7 +35,7 @@
 <script type="application/javascript">
 
     $('#guardarContrasena').click(function(){
-        var e = 'ajax.php?controller=User&action=changePasswordUser'; console.debug(e);
+        var e = 'index.php?controller=admin&action=changePasswordUser'; console.debug(e);
         var idUsuario = $("#idUsuario").val();
         var pass1 = $("#CLAVE_EMPLEADO").val();
         var pass2 = $("#CLAVE_EMPLEADO2").val();
@@ -60,7 +60,7 @@
         $.ajax({
             type: 'GET',
             url: e,
-            data: { idUsuario:idUsuario ,password: pass1},
+            data: { idUsuario:idUsuario, password: pass1},
             beforeSend: function () {
                 $('#guardarContrasena').html("Cargando...");
             },

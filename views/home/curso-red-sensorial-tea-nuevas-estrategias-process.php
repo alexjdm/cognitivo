@@ -11,8 +11,7 @@
                 <p>Seminario para profesionales que aborda las nuevas estrategias de intervención multidisciplinarias en niños con TEA.</p>
 
 
-                <h1 class="inline" style="font-family: 'Bariol Regular'; margin-bottom: 0;: ">2 x $160.000 <span class="inline tachado" style="font-size: 12pt;">$100.000 CLP c/u</span></h1>
-                <p>Esta oferta termina este jueves 14 de septiembre</p>
+                <h1 class="inline" style="font-family: 'Bariol Regular'; margin-bottom: 0;: ">2 x $100.000 <span class="inline tachado" style="font-size: 12pt;">$60.000 CLP c/u</span></h1>
             </div>
         </div>
     </div>

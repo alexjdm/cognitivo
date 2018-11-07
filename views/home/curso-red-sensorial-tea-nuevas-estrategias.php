@@ -11,8 +11,7 @@
                 <p>Seminario para profesionales que aborda las nuevas estrategias de intervención multidisciplinarias en niños con TEA.</p>
 
 
-                <h1 class="inline" style="font-family: 'Bariol Regular'; margin-bottom: 0;: ">2 x $160.000 <span class="inline tachado" style="font-size: 12pt;">$100.000 CLP c/u</span></h1>
-                <p>Esta oferta termina este jueves 14 de septiembre</p>
+                <h1 class="inline" style="font-family: 'Bariol Regular'; margin-bottom: 0;: ">2 x $100.000 <span class="inline tachado" style="font-size: 12pt;">$60.000 CLP c/u</span></h1>
                 <button id="botonGoToInscripcion" data-id="inscripcionCurso" class="btn btn-default" onclick="goToByScroll($(this).data('id'))">Inscribirse</button>
             </div>
         </div>
@@ -56,12 +55,8 @@
 
                     <div class="incentives">
                         <h3>Valores</h3>
-                        <p>$100.000 para profesionales.</p>
-                        <p>$80.000 para estudiantes.</p>
-
-                        <h3>Descuentos</h3>
-                        <p>Profesionales 2 o más $80.000 c/u</p>
-                        <p>Estudiantes 2 o más $60.000 c/u</p>
+                        <p>$60.000 para profesionales.</p>
+                        <p>$50.000 para estudiantes.</p>
 
                         <h3>Formas de pago.</h3>
                         <p>Efectivo en sucursal La Florida.</p>
@@ -74,8 +69,8 @@
                         <p>5 y 6 de octubre 2018 de 9 a 17 hrs. cada día.</p>
 
                         <h3>Lugar</h3>
-                        <!--<p>Universidad Central, Avda. Santa Isabel 1278, Santiago Centro.</p>-->
-                        <p>Universidad Central</p>
+                        <p>UDLA, Echaurren 140, Santiago Centro.</p>
+                        <p>Universidad de las Américas</p>
 
                     </div>
 

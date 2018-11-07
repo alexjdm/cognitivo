@@ -13,7 +13,7 @@ class Usuario_DAO
     {
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = $pdo->prepare("SELECT * FROM usuarios WHERE CORREO_ELECTRONICO=:EMAIL AND CLAVE_USUARIO=:PASSWORD AND HABILITADO=1");
+        $sql = $pdo->prepare("SELECT * FROM usuario WHERE CORREO_ELECTRONICO=:EMAIL AND CLAVE_USUARIO=:PASSWORD AND HABILITADO=1");
         $sql->execute(array('EMAIL' => $email, 'PASSWORD' => $password));
         $resultado = $sql->fetch();
         //print_r($resultado);
@@ -32,7 +32,7 @@ class Usuario_DAO
             $status  = "success";
             $message = "Usuario registrado.";
         } else {
-            $sql = $pdo->prepare("SELECT * FROM usuarios WHERE CORREO_ELECTRONICO=:EMAIL AND HABILITADO=1");
+            $sql = $pdo->prepare("SELECT * FROM usuario WHERE CORREO_ELECTRONICO=:EMAIL AND HABILITADO=1");
             $sql->execute(array('EMAIL' => $email));
             $resultado = $sql->fetch();
 
@@ -61,7 +61,7 @@ class Usuario_DAO
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql = $pdo->prepare("SELECT * FROM usuarios WHERE HABILITADO='1'");
+        $sql = $pdo->prepare("SELECT * FROM usuario WHERE HABILITADO='1'");
         $sql->execute();
 
         return $sql->fetchAll();
@@ -71,7 +71,7 @@ class Usuario_DAO
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql = $pdo->prepare("SELECT * FROM usuarios WHERE ID_PERFIL = 1 AND HABILITADO='1'");
+        $sql = $pdo->prepare("SELECT * FROM usuario WHERE ID_PERFIL = 1 AND HABILITADO='1'");
         $sql->execute();
 
         return $sql->fetchAll();
@@ -81,7 +81,7 @@ class Usuario_DAO
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql = $pdo->prepare("SELECT * FROM usuarios WHERE ID_PERFIL = 2 AND HABILITADO='1'");
+        $sql = $pdo->prepare("SELECT * FROM usuario WHERE ID_PERFIL = 2 AND HABILITADO='1'");
         $sql->execute();
 
         return $sql->fetchAll();
@@ -91,7 +91,7 @@ class Usuario_DAO
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql = $pdo->prepare("SELECT * FROM usuarios WHERE ID_PERFIL = 3 AND HABILITADO='1'");
+        $sql = $pdo->prepare("SELECT * FROM usuario WHERE ID_PERFIL = 3 AND HABILITADO='1'");
         $sql->execute();
 
         return $sql->fetchAll();
@@ -111,7 +111,7 @@ class Usuario_DAO
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql = $pdo->prepare("SELECT * FROM usuarios WHERE ID_PERFIL = 1 AND ID_PERFIL = 2 AND HABILITADO='1'");
+        $sql = $pdo->prepare("SELECT * FROM usuario WHERE ID_PERFIL = 1 AND ID_PERFIL = 2 AND HABILITADO='1'");
         $sql->execute();
 
         return $sql->fetchAll();
@@ -121,27 +121,29 @@ class Usuario_DAO
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql = $pdo->prepare("SELECT * FROM usuarios WHERE ID_USUARIO=:ID_USUARIO AND HABILITADO=:HABILITADO");
+        $sql = $pdo->prepare("SELECT * FROM usuario WHERE ID_USUARIO=:ID_USUARIO AND HABILITADO=:HABILITADO");
         $sql->execute(array('ID_USUARIO' => $idUsuario, 'HABILITADO' => 1));
 
         return $sql->fetchAll()[0];
     }
 
-    public function editUser($idUsuario, $nombre, $apellido, $especialidad, $fechaNac, $correo_electronico, $telefono1, $telefono2, $direccion, $perfil){
+    public function editUser($idUsuario, $nombre, $apellido, $idEspecialidad, $fechaNac, $correoElectronico, $telefono1, $telefono2, $direccion, $perfil){
 
         if($fechaNac != null)
             $fechaNac = FormatearFechaEn($fechaNac);
+        else
+            $fechaNac = null;
 
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql = $pdo->prepare("UPDATE usuarios set NOMBRE =:NOMBRE, APELLIDO =:APELLIDO, ESPECIALIDAD =:ESPECIALIDAD, CORREO_ELECTRONICO =:CORREO_ELECTRONICO, ID_PERFIL =:ID_PERFIL, TELEFONO1=:TELEFONO1, TELEFONO2=:TELEFONO2, DIRECCION=:DIRECCION, FECHA_NACIMIENTO=:FECHA_NACIMIENTO WHERE ID_USUARIO=:ID_USUARIO");
+        $sql = $pdo->prepare("UPDATE usuario set NOMBRE =:NOMBRE, APELLIDO =:APELLIDO, ID_ESPECIALIDAD =:ID_ESPECIALIDAD, CORREO_ELECTRONICO =:CORREO_ELECTRONICO, ID_PERFIL =:ID_PERFIL, TELEFONO1=:TELEFONO1, TELEFONO2=:TELEFONO2, DIRECCION=:DIRECCION, FECHA_NACIMIENTO=:FECHA_NACIMIENTO WHERE ID_USUARIO=:ID_USUARIO");
 
         if ($sql->execute(array(
             'NOMBRE' => $nombre,
             'APELLIDO' => $apellido,
-            'ESPECIALIDAD' => $especialidad,
-            'CORREO_ELECTRONICO' => $correo_electronico,
+            'ID_ESPECIALIDAD' => $idEspecialidad,
+            'CORREO_ELECTRONICO' => $correoElectronico,
             'ID_PERFIL' => $perfil,
             'TELEFONO1' => $telefono1,
             'TELEFONO2' => $telefono2,
@@ -172,7 +174,7 @@ class Usuario_DAO
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql = $pdo->prepare("UPDATE usuarios set CLAVE_USUARIO =:PASSWORD WHERE ID_USUARIO=:ID_USUARIO");
+        $sql = $pdo->prepare("UPDATE usuario set CLAVE_USUARIO =:PASSWORD WHERE ID_USUARIO=:ID_USUARIO");
 
         if ($sql->execute(array('PASSWORD' => md5($password), 'ID_USUARIO' => $idUsuario))) {
             $status  = "success";
@@ -198,7 +200,7 @@ class Usuario_DAO
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql = $pdo->prepare("UPDATE usuarios set HABILITADO =:HABILITADO WHERE ID_USUARIO=:ID_USUARIO");
+        $sql = $pdo->prepare("UPDATE usuario set HABILITADO =:HABILITADO WHERE ID_USUARIO=:ID_USUARIO");
 
         if ($sql->execute(array('HABILITADO' => 0, 'ID_USUARIO' => $idUsuario ))) {
             $status  = "success";
@@ -220,7 +222,7 @@ class Usuario_DAO
         Database::disconnect();
     }
 
-    public function newUser($nombre, $apellido, $especialidad, $fechaNac, $correo_electronico, $telefono1, $telefono2, $direccion, $perfil, $idPaciente){
+    public function newUser($nombre, $apellido, $idEspecialidad, $fechaNac, $correo_electronico, $telefono1, $telefono2, $direccion, $perfil, $idPaciente){
 
         if($fechaNac != null)
             $fechaNac = FormatearFechaEn($fechaNac);
@@ -237,14 +239,14 @@ class Usuario_DAO
             $pdo = Database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            $sql = $pdo->prepare("SELECT * FROM usuarios WHERE CORREO_ELECTRONICO=:EMAIL");
+            $sql = $pdo->prepare("SELECT * FROM usuario WHERE CORREO_ELECTRONICO=:EMAIL");
             $sql->execute(array('EMAIL' => $correo_electronico));
             $resultado = $sql->fetch();
 
             if ($resultado == null) {
 
-                $sql = $pdo->prepare("INSERT INTO `usuarios`(`NOMBRE`, `APELLIDO`, `ESPECIALIDAD`, `CORREO_ELECTRONICO`, `CLAVE_USUARIO`, `HABILITADO`, `ID_PERFIL`, `TELEFONO1`, `TELEFONO2`, `DIRECCION`, `FECHA_NACIMIENTO`) VALUES (:nombre,:apellido,:especialidad,:correo,:password,'1',:id_perfil,:telefono1,:telefono2,:direccion,:fechaNac)");
-                $sql->execute(array('nombre' => $nombre, 'apellido' => $apellido, 'especialidad' => $especialidad, 'correo' => $correo_electronico, 'password' => md5($password), 'id_perfil' => $perfil, 'telefono1' => $telefono1, 'telefono2' => $telefono2, 'direccion' => $direccion, 'fechaNac' => $fechaNac));
+                $sql = $pdo->prepare("INSERT INTO `usuario`(`NOMBRE`, `APELLIDO`, `ESPECIALIDAD`, `CORREO_ELECTRONICO`, `CLAVE_USUARIO`, `HABILITADO`, `ID_PERFIL`, `TELEFONO1`, `TELEFONO2`, `DIRECCION`, `FECHA_NACIMIENTO`) VALUES (:nombre,:apellido,:idEspecialidad,:correo,:password,'1',:id_perfil,:telefono1,:telefono2,:direccion,:fechaNac)");
+                $sql->execute(array('nombre' => $nombre, 'apellido' => $apellido, 'idEspecialidad' => $idEspecialidad, 'correo' => $correo_electronico, 'password' => md5($password), 'id_perfil' => $perfil, 'telefono1' => $telefono1, 'telefono2' => $telefono2, 'direccion' => $direccion, 'fechaNac' => $fechaNac));
                 $id = $pdo->lastInsertId();
 
                 if(!empty($id)) {

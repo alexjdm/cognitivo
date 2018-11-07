@@ -2,6 +2,10 @@
 
 require_once "models/Curso_DAO.php";
 require_once "businesslogic/Curso.php";
+require_once "businesslogic/Usuario.php";
+require_once "businesslogic/Detalle.php";
+require_once "businesslogic/Especialidad.php";
+include_once("helpers/SessionHelper.php");
 
 class adminController {
 
@@ -191,6 +195,140 @@ class adminController {
 
     /// REGION CURSOS
 
+
+    /// REGION PROFESIONALES
+
+    public function profesionales() {
+
+        $this->pageTitle = "Cognitivo Centro de Terapias";
+        $this->pageDescription = "Centro de terapia especialista en Autismo. Contamos con especialidades en Fonoaudiología, Terapia Ocupacional, Psicología y Psicopedagogía.";
+        $this->pageKeywords = 'centro de autismo, TEA, Fonoaudiología,Psicología,Psicopedagogía,centro de Terapia Ocupacional, centro de Terapia Ocupacional para niños';
+        $this->page = 'views/admin/usuarios/profesionales.php';
+        $controller = "admin";
+        $action = "profesionales";
+
+        $isSuperAdmin = isSuperAdmin();
+
+        $usuarioBusiness = new Usuario();
+        $usuarios = $usuarioBusiness->getProfesionales();
+
+        $especialidadBusiness = new Especialidad();
+        $especialidades = $especialidadBusiness->getEspecialidades();
+
+        require_once('views/admin/Shared/layout.php');
+    }
+
+    public function newUser() {
+        $idPaciente = isset($_GET['idPaciente']) ? $_GET['idPaciente'] : null; // Se usa para asignar un apoderado a un paciente.
+        $vista = isset($_GET['vista']) ? $_GET['vista'] : null;
+        $addApoderado = isset($_GET['addApoderado']) ? $_GET['addApoderado'] : null;
+
+        require_once('views/admin/usuarios/newUser.php');
+    }
+
+    public function createNewUser() {
+        $idPaciente = isset($_GET['idPaciente']) ? $_GET['idPaciente'] : null; // Se usa para asignar un apoderado a un paciente.
+        $nombre = isset($_GET['nombre']) ? $_GET['nombre'] : null;
+        $apellido = isset($_GET['apellido']) ? $_GET['apellido'] : null;
+        $idEspecialidad = isset($_GET['idEspecialidad']) ? $_GET['idEspecialidad'] : null;
+        $fechaNac = isset($_GET['fechaNac']) ? $_GET['fechaNac'] : null;
+        $correoElectronico = isset($_GET['email']) ? $_GET['email'] : null;
+        $telefono1 = isset($_GET['telefono1']) ? $_GET['telefono1'] : null;
+        $telefono2 = isset($_GET['telefono2']) ? $_GET['telefono2'] : null;
+        $direccion = isset($_GET['direccion']) ? $_GET['direccion'] : null;
+        $perfil = isset($_GET['perfil']) ? $_GET['perfil'] : null;
+
+        $usuarioBusiness = new Usuario();
+        $usuarioBusiness->newUser($nombre, $apellido, $idEspecialidad, $fechaNac, $correoElectronico, $telefono1, $telefono2, $direccion, $perfil, $idPaciente);
+    }
+
+    // Abrir vista para editar usuario
+    public function userEdit() {
+
+        $idUsuario = isset($_GET['idUsuario']) ? $_GET['idUsuario'] : null;
+        $vista = isset($_GET['vista']) ? $_GET['vista'] : null;
+        $addApoderado = isset($_GET['addApoderado']) ? $_GET['addApoderado'] : null;
+
+        $usuarioBusiness = new Usuario();
+        $usuario = $usuarioBusiness->getUser($idUsuario);
+
+        $especialidadBusiness = new Especialidad();
+        $especialidades = $especialidadBusiness->getEspecialidades();
+
+        require_once('views/admin/usuarios/userEdit.php');
+    }
+
+    //Guardar en BD los datos del usuario
+    public function editUser() {
+        $idUsuario = isset($_GET['idUsuario']) ? $_GET['idUsuario'] : null;
+        $nombre = isset($_GET['nombre']) ? $_GET['nombre'] : null;
+        $apellido = isset($_GET['apellido']) ? $_GET['apellido'] : null;
+        $idEspecialidad = isset($_GET['idEspecialidad']) ? $_GET['idEspecialidad'] : null;
+        $fechaNac = isset($_GET['fecha']) ? $_GET['fecha'] : null;
+        $correo_electronico = isset($_GET['email']) ? $_GET['email'] : null;
+        $telefono1 = isset($_GET['telefono1']) ? $_GET['telefono1'] : null;
+        $telefono2 = isset($_GET['telefono2']) ? $_GET['telefono2'] : null;
+        $direccion = isset($_GET['direccion']) ? $_GET['direccion'] : null;
+        $perfil = isset($_GET['perfil']) ? $_GET['perfil'] : null;
+
+        $usuarioBusiness = new Usuario();
+        $usuarioBusiness->editUser($idUsuario, $nombre, $apellido, $idEspecialidad, $fechaNac, $correo_electronico, $telefono1, $telefono2, $direccion, $perfil);
+    }
+
+    //Guardar en BD los datos del usuario
+    public function deleteUser() {
+        $idUsuario = isset($_GET['idUsuario']) ? $_GET['idUsuario'] : null;
+
+        $usuarioBusiness = new Usuario();
+        $usuarioBusiness->deleteUser($idUsuario);
+    }
+
+    public function passwordUser() {
+        $idUsuario = isset($_GET['idUsuario']) ? $_GET['idUsuario'] : null;
+
+        require_once('views/admin/usuarios/passwordUser.php');
+    }
+
+    //Guardar en BD los datos del usuario
+    public function changePasswordUser() {
+        $idUsuario = isset($_GET['idUsuario']) ? $_GET['idUsuario'] : null;
+        $password = isset($_GET['password']) ? $_GET['password'] : null;
+
+        $usuarioBusiness = new Usuario();
+        $usuarioBusiness->changePasswordUser($idUsuario, $password);
+    }
+
+    /// END REGION PROFESIONALES
+
+    /// REGION DETALLE DIARIO
+
+    public function detallediario() {
+
+        date_default_timezone_set('America/Santiago');
+
+        $this->pageTitle = "Cognitivo Centro de Terapias";
+        $this->pageDescription = "Centro de terapia especialista en Autismo. Contamos con especialidades en Fonoaudiología, Terapia Ocupacional, Psicología y Psicopedagogía.";
+        $this->pageKeywords = 'centro de autismo, TEA, Fonoaudiología,Psicología,Psicopedagogía,centro de Terapia Ocupacional, centro de Terapia Ocupacional para niños';
+        $this->page = 'views/admin/bill/index.php';
+        $controller = "admin";
+        $action = "cursos";
+
+        $usuarioBusiness = new Usuario();
+        $profesionales = $usuarioBusiness->getProfesionales();
+        $pacientes = $usuarioBusiness->getPacientes();
+
+
+        $fechaInicio = date("Y-m-d");
+        $fechaFin = date("Y-m-d", strtotime($fechaInicio. ' + 1 days'));
+        $fechaFin = date("Y-m-d H:i:s", strtotime($fechaFin) - 1);
+
+        $detalleBusiness = new Detalle();
+        $detalles = $detalleBusiness->getDetalle($fechaInicio, $fechaFin);
+
+        require_once( 'views/admin/Shared/layout.php' );
+    }
+
+    /// END REGION DETALLE DIARIO
 
     public function error() {
         $this->pageTitle = 'Error | Cognitivo';

@@ -41,13 +41,13 @@ class accountController {
 
         $pdo = Database::connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = $pdo->prepare("SELECT * FROM usuarios WHERE CORREO_ELECTRONICO=:EMAIL AND HABILITADO=1");
+        $sql = $pdo->prepare("SELECT * FROM usuario WHERE CORREO_ELECTRONICO=:EMAIL AND HABILITADO=1");
         $sql->execute(array('EMAIL' => $email));
         $resultado = $sql->fetch();
 
         if ($resultado != null) {
 
-            $sql = $pdo->prepare("UPDATE usuarios set CLAVE_USUARIO =:PASSWORD WHERE ID_USUARIO=:ID_USUARIO");
+            $sql = $pdo->prepare("UPDATE usuario set CLAVE_USUARIO =:PASSWORD WHERE ID_USUARIO=:ID_USUARIO");
 
             if ($sql->execute(array('PASSWORD' => md5($password), 'ID_USUARIO' => $resultado['ID_USUARIO']))) {
 

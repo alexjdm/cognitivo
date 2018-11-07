@@ -6,12 +6,12 @@
     <div class="container">
         <div class="row text-center no-fade" style="opacity: 1;">
             <div class="col-sm-12 text-left">
-                <h2 style="font-family: 'Bariol Regular'; font-size: 16pt;">Seminario Intensivo:</h2>
-                <h1 style="font-family: Dosis; margin-top: 0; margin-bottom: 15px; font-weight: normal;"><b>TEA: NUEVAS ESTRATEGIAS DE INTERVENCIÓN MULTIDISCIPLINARIA</b></h1>
-                <p>Seminario para profesionales que aborda las nuevas estrategias de intervención multidisciplinarias en niños con TEA.</p>
+                <h2 style="font-family: 'Bariol Regular'; font-size: 16pt;">Taller para padres:</h2>
+                <h1 style="font-family: Dosis; margin-top: 0; margin-bottom: 15px; font-weight: normal;"><b>HABILIDADES PARENTALES</b></h1>
+                <p>¿Cómo aplicar las habilidades parentales cuando existen conductas  difíciles de manejar?</p>
 
 
-                <h1 class="inline" style="font-family: 'Bariol Regular'; margin-bottom: 0;: ">2 x $100.000 <span class="inline tachado" style="font-size: 12pt;">$60.000 CLP c/u</span></h1>
+                <h1 class="inline" style="font-family: 'Bariol Regular'; margin-bottom: 0;: ">$10.000 CLP c/u</h1>
                 <button id="botonGoToInscripcion" data-id="inscripcionCurso" class="btn btn-default" onclick="goToByScroll($(this).data('id'))">Inscribirse</button>
             </div>
         </div>

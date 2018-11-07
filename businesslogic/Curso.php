@@ -72,10 +72,12 @@ class Curso {
     {
         $idCorreoMasivo = 1;
         $cursoDao = new Curso_DAO();
-        $inscritos1 = $cursoDao->getInscritos(3);
-        $inscritos2 = $cursoDao->getInscritos(5);
+        $inscritos1 = $cursoDao->getPagados(10);
+        /*$inscritos2 = $cursoDao->getInscritos(2);
+        $inscritos3 = $cursoDao->getInscritos(4);*/
         $inscritos = $inscritos1;
-        array_merge($inscritos, $inscritos2);
+        /*$inscritos = array_merge($inscritos, $inscritos2);
+        $inscritos = array_merge($inscritos, $inscritos3);*/
 
         $inscritosFinales = array();
         foreach ($inscritos as $inscrito) {
@@ -85,13 +87,32 @@ class Curso {
             }
         }
 
+        /*$blackList = $cursoDao->getInscritos(9);
+
+        foreach ($blackList as $bl) {
+            $ins = array($bl['name'], $bl['email']);
+            if (in_array($ins, $inscritosFinales)) {
+                $inscritosFinales = array_diff($inscritosFinales, $ins);
+            }
+        }*/
+
         $status  = "success";
         $message = "El mail ha sido enviado exitosamente.";
-
+        $inscritosNoEnviados = array();
+        $contador = 0;
         foreach ($inscritosFinales as $inscritoFinal)
         {
             $correo = $inscritoFinal[1];
             //$correo = 'jazminn.chavez@gmail.com';
+
+            if($correo == "" || $correo == null)
+                continue;
+
+            $contador = $contador + 1;
+            /*if($contador < 42)
+                continue;*/
+
+            //sleep(20);
 
             $mail = new PHPMailer(true);
 
@@ -113,11 +134,11 @@ class Curso {
                 //$mail->addCC('cc@example.com');
                 $mail->addBCC('alexjdm@gmail.com');
 
-                $message = file_get_contents('views/template/promocion-curso-tres.html');
+                $message = file_get_contents('views/template/confirmacion-curso-habilidades-parentales.html');
                 $message = str_replace('%nombrecompleto%', $inscritoFinal[0], $message);
 
                 $mail->isHTML(true);                                  // Set email format to HTML
-                $mail->Subject = 'Invitación Curso Cognitivo';
+                $mail->Subject = 'Curso Cognitivo';
                 $mail->Body    = $message;
                 //$mail->AltBody = 'Hola, has recibido correo a través de cognitivo.cl. Correo: ' . $correo . ' Telefono: ' . $telefono;
 
@@ -130,6 +151,8 @@ class Curso {
                 $status  = "error";
                 //$message = 'Mensaje no pudo ser enviado.';
                 $message = 'Mailer Error: ' . $mail->ErrorInfo;
+                //array_push($inscritosNoEnviados, $inscritoFinal);
+                return;
             }
         }
 

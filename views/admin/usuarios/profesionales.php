@@ -68,7 +68,7 @@ if (!isset($_SESSION)) {
                             ?>
                         </td>
                         <td><?php echo $usuario['CORREO_ELECTRONICO'] ?></td>
-                        <td><?php echo $usuario['TELEFONO'] ?></td>
+                        <td><?php echo $usuario['TELEFONO1'] ?></td>
                         <td>
                             <button data-original-title="Edit Row" class="btn btn-xs btn-default editUser">
                                 <i class="fa fa-pencil"></i>
@@ -107,7 +107,7 @@ if (!isset($_SESSION)) {
         $("#tablaProfesionales").on("click", ".editUser", (function() {
             var id = $(this).closest('tr').data("id"); console.debug(id);
             ajax_loadModal($('#modalPrincipal'),
-                'ajax.php?controller=User&action=userEdit',
+                'index.php?controller=admin&action=userEdit',
                 'GET',
                 { idUsuario: id, vista: "profesionales" },
                 defaultMessage);
@@ -126,13 +126,13 @@ if (!isset($_SESSION)) {
 
                 $.ajax({
                     type: 'GET',
-                    url: 'ajax.php?controller=User&action=deleteUser',
+                    url: 'index.php?controller=admin&action=deleteUser',
                     data: { idUsuario: id },
                     beforeSend: function() {
                     },
                     success: function(data) {
 
-                        if (data.status == 'error') {
+                        if (data.status === 'error') {
                             $( "#messageUser" ).fadeOut( "slow", function() {
                                 $('#messageUser').html('<div class="alert alert-danger" role="alert">' + data.message + '</div>');
                             });
@@ -140,7 +140,7 @@ if (!isset($_SESSION)) {
                             $( "#messageUser" ).fadeOut( "slow", function() {
                                 $('#messageUser').html('<div class="alert alert-success" role="alert">' + data.message + '</div>');
                             });
-                            window.location.href = "index.php?controller=User&action=profesionales";
+                            window.location.href = "index.php?controller=admin&action=profesionales";
                         }
                     },
                     error: function(data) {
@@ -154,8 +154,8 @@ if (!isset($_SESSION)) {
 
         $("#newProfesional").click(function() {
             ajax_loadModal($('#modalPrincipal'),
-                'user/newuser/',
-                'POST',
+                'index.php?controller=admin&action=newuser',
+                'GET',
                 { vista: "profesionales" },
                 defaultMessage);
             return false;

@@ -156,6 +156,17 @@ class blogController {
         require_once('views/layout.php');
     }
 
+    public function habilidadesparentales() {
+        $this->pageTitle = '¿Cómo aplicar las habilidades parentales cuando existen conductas  difíciles de manejar? | Blog Cognitivo';
+        $this->pageDescription = "Al hablar del bienestar de niños, niñas y adolescentes uno de los principales focos de atención es la forma en la que sus padres se comenzarán a relacionar con ellos (as) desde sus primeros años de vida hasta su adolescencia, esto será de suma importancia para un mejor y adecuado desarrollo tanto físico, social y emocional, siendo la base para la llegada de la adultez.";
+        $this->pageKeywords = "habilidades parentales, psicología, parentalidad positiva, hijos, situaciones complejas";
+        $this->page = 'views/blog/habilidades-parentales.php';
+        $this->navbar = 'navbar-interior.php';
+        $this->navbarfooter = 'navbar-footer.php';
+
+        require_once('views/layout.php');
+    }
+
     public function error() {
         $this->pageTitle = 'Error | Librodeasistencia';
         $this->pageDescription = "librodeasistencia.com permite gestionar el reloj control de asistencia biométrico en forma online. Software 100% web.";

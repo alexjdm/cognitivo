@@ -22,9 +22,9 @@
 
             <?php if($vista == "profesionales") : ?>
             <div class="form-group">
-                <label class="col-sm-3 control-label" for="especialidad">Especialidad</label>
+                <label class="col-sm-3 control-label" for="idEspecialidad">Especialidad</label>
                 <div class="col-sm-9">
-                    <select id="especialidad" class="form-control">
+                    <select id="idEspecialidad" class="form-control">
                         <?php
                         foreach ($especialidades as $especialidad):
                             echo '<option value="' . $especialidad['ID_ESPECIALIDAD'] . '">' . utf8_encode($especialidad['NOMBRE']) . '</option>';
@@ -136,7 +136,7 @@
         var idPaciente = $("#idPaciente").val();
         var nombre = $("#nombre").val();
         var apellido = $("#apellido").val();
-        var especialidad = $("#especialidad").val();
+        var idEspecialidad = $("#idEspecialidad").val();
         var fecha = $("#fecha").val();
         var email = $("#email").val();
         var telefono1 = $("#telefono1").val();
@@ -153,7 +153,7 @@
             $.ajax({
                 type: 'POST',
                 url: e,
-                data: { nombre: nombre, apellido:apellido, especialidad:especialidad, fecha: fecha, email: email, telefono1: telefono1, telefono2: telefono2, direccion: direccion, perfil: perfil, idPaciente: idPaciente },
+                data: { nombre: nombre, apellido:apellido, idEspecialidad:idEspecialidad, fecha: fecha, email: email, telefono1: telefono1, telefono2: telefono2, direccion: direccion, perfil: perfil, idPaciente: idPaciente },
                 dataType : "json",
                 beforeSend: function () {
                     $('#newUserBtn').html("Cargando...");
