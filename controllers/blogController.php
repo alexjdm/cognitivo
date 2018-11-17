@@ -167,6 +167,17 @@ class blogController {
         require_once('views/layout.php');
     }
 
+    public function manejoconductasinapropiadasdemihijo() {
+        $this->pageTitle = '¿Cómo manejo las conductas inapropiadas de mi hijo? | Blog Cognitivo';
+        $this->pageDescription = "Dentro de la población infantil son comunes las expresiones de enfado, descontrol o desregulación emocional por medio de pataletas o comportamientos disruptivos. Estas pueden ocurrir por diversos factores, ya sean personales o ambientales, y es más común observarlas en niños que presentan condición del Espectro Autista, debido a las dificultades que presentan para manifestar sus estados emocionales, sus necesidades fisiológicas, sus intereses o deseos, entre otros aspectos.";
+        $this->pageKeywords = "terapia ocupacional, parentalidad, hijos, conductas inapropiadas, autismo, tea";
+        $this->page = 'views/blog/manejo-conductas-inapropiadas-de-mi-hijo.php';
+        $this->navbar = 'navbar-interior.php';
+        $this->navbarfooter = 'navbar-footer.php';
+
+        require_once('views/layout.php');
+    }
+
     public function error() {
         $this->pageTitle = 'Error | Librodeasistencia';
         $this->pageDescription = "librodeasistencia.com permite gestionar el reloj control de asistencia biométrico en forma online. Software 100% web.";
