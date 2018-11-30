@@ -72,7 +72,7 @@ class Curso {
     {
         $idCorreoMasivo = 1;
         $cursoDao = new Curso_DAO();
-        $inscritos1 = $cursoDao->getPagados(10);
+        $inscritos1 = $cursoDao->getPagados(11);
         /*$inscritos2 = $cursoDao->getInscritos(2);
         $inscritos3 = $cursoDao->getInscritos(4);*/
         $inscritos = $inscritos1;
@@ -134,7 +134,7 @@ class Curso {
                 //$mail->addCC('cc@example.com');
                 $mail->addBCC('alexjdm@gmail.com');
 
-                $message = file_get_contents('views/template/confirmacion-curso-habilidades-parentales.html');
+                $message = file_get_contents('views/template/confirmacion-curso-manejo-conductas-inapropiadas.html');
                 $message = str_replace('%nombrecompleto%', $inscritoFinal[0], $message);
 
                 $mail->isHTML(true);                                  // Set email format to HTML

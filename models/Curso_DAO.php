@@ -239,9 +239,11 @@ class Curso_DAO
 
         if($resultado == null)
         {
-            $sql = $pdo->prepare("INSERT INTO `correo_masivo_usuario`(`ID_CORREO_MASIVO`, `CORREO`, `ESTADO`) VALUES (:ID_CORREO_MASIVO,:CORREO,'1')");
+            $sql = $pdo->prepare("INSERT INTO `correo_masivo_usuario`(`ID_CORREO_MASIVO`, `CORREO`, `FECHA`, `ESTADO`) VALUES (:ID_CORREO_MASIVO,:CORREO,:FECHA,'1')");
 
-            if($sql->execute(array('ID_CORREO_MASIVO' => trim($idCorreoMasivo), 'CORREO' => $correo))) {
+            $date = date("Y-m-d H:i:s");
+
+            if($sql->execute(array('ID_CORREO_MASIVO' => trim($idCorreoMasivo), 'FECHA' => $date, 'CORREO' => $correo))) {
                 $status  = "success";
                 $message = "Creación exitosa.";
             }
@@ -259,6 +261,31 @@ class Curso_DAO
         //echo json_encode($data);
 
         Database::disconnect();
+
+    }
+
+    public function yaSeEnvioCorreoMasivo($idCorreoMasivo, $correo) {
+
+        if (!defined("PHP_EOL")) define("PHP_EOL", "\r\n");
+
+        $pdo = Database::connect();
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        $sql = $pdo->prepare("SELECT * FROM correo_masivo_usuario WHERE ID_CORREO_MASIVO=$idCorreoMasivo AND CORREO= :CORREO");
+        $sql->execute(array('CORREO' => $correo));
+
+        $resultado = $sql->fetchAll();
+
+        Database::disconnect();
+
+        if($resultado == null)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
 
     }
 

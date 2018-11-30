@@ -1,4 +1,8 @@
-<link rel="shortcut icon" href="http://www.cognitivo.cl/dist/images/favicon.png">
+<!--<link rel="shortcut icon" href="images/favicon.png">-->
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="dist/images/favicon.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="dist/images/favicon-114.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="dist/images/favicon-72.png" />
 <!-- Tell the browser to be responsive to screen width -->
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <!-- Bootstrap 3.3.5 -->

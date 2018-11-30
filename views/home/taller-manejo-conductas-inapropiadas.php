@@ -28,16 +28,39 @@
 
                 <div class="col-sm-7">
 
-                    <div class="col-md-12">
-                        <h2>Temario</h2>
-                        <p>Pronto estará disponible.</p>
-                        <!--<p>Integración Sensorial, sus sistemas y perfiles sensoriales</p>
-                        <p>Características de la intervención</p>
-                        <p>Integración Sensorial en TEA</p>
-                        <p>Contextualizando la problemática…</p>
-                        <p>Alimentación como hito del desarrollo</p>
-                        <p>Sensorialidad Oral: motricidad y lenguaje</p>
-                        <p>Estrategias de manejo en el hogar</p>-->
+                    <div class="col-md-12 text-left">
+                        <h2 class="text-center">Temario</h2>
+
+                        <p>Tema 1: Definición e identificación de la conducta inapropiada.</p>
+                        <ul>
+                            <li>Comparación entre el comportamiento típico y la conducta inapropiada.</li>
+                            <li>Relación entre contexto y la conducta.</li>
+                            <li>Factores que influyen en la conducta problemática.</li>
+                        </ul>
+
+                        <p>Tema 2: Funciones de la conducta inapropiada.</p>
+                        <ul>
+                            <li>Método de evaluación de la conducta problemática.</li>
+                            <li>Obtención y evitación de acciones, objetos o actividades.</li>
+                        </ul>
+
+
+                        <p>Tema 3: Causas o factores desencadenantes de las conductas inapropiadas.</p>
+                        <ul>
+                            <li>Desregulación emocional.</li>
+                            <li>Desorganización del comportamiento y la conducta.</li>
+                            <li>Bases neuroanatómicas del comportamiento típico y atípico.</li>
+                            <li>Dificultades de la comunicación.</li>
+                            <li>Dificultades del procesamiento sensorial.</li>
+                        </ul>
+
+                        <p>Tema 4: Abordaje de las conductas inapropiadas.</p>
+                        <ul>
+                            <li>Estrategias de manejo emocional-conductual.</li>
+                            <li>Estrategias para favorecer la conducta y la comunicación.</li>
+                            <li>Estrategias de regulación de las conductas en relación al procesamiento sensorial.</li>
+                        </ul>
+
                     </div>
 
                     <div class="col-md-12">

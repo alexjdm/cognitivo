@@ -68,7 +68,7 @@
                     $('#loginBtn').button('loading');
                 },
                 success: function(data) {
-                    //console.debug(data);
+                    console.debug(data);
                     //console.debug('Redireccionar a views/home/index.php');
                     $('#loginBtn').button('reset');
                     if(data.status == 'success')
@@ -84,7 +84,7 @@
 
                 },
                 error: function(data) {
-                    //console.debug(data);
+                    console.debug(data);
                     //console.debug('Redireccionar a views/account/login.php');
                     $('#loginBtn').button('reset');
                     $('#login-box-message').html('<div class="alert alert-danger" role="alert">' + data.message + '</div>');

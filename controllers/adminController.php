@@ -22,7 +22,7 @@ class adminController {
         $controller = "admin";
         $action = "home";
         $this->pageKeywords = 'centro de autismo, TEA, Fonoaudiología,Psicología,Psicopedagogía,centro de Terapia Ocupacional, centro de Terapia Ocupacional para niños';
-
+		
         require_once( 'views/admin/Shared/layout.php' );
     }
 
