@@ -363,48 +363,48 @@
                 <div class="col-sm-3">
                     <ul class="price-table">
                         <li class="title">PLAN 1</li>
-                        <li class="price">$120.000</li>
+                        <li class="price">$125.000</li>
                         <li>2 sesiones semanales</li>
                         <li>8 sesiones mensuales</li>
-                        <li>Valor por sesión $15.000</li>
+                        <li>Valor por sesión $15.625</li>
                         <li>Sin plan $160.000</li>
-                        <li>Ahorra $40.000</li>
+                        <li>Ahorra $35.000</li>
                         <li><a href="#contact" class="btn btn-success btn-lg">CONSULTA</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3">
                     <ul class="price-table">
                         <li class="title">PLAN 2</li>
-                        <li class="price">$150.000</li>
+                        <li class="price">$160.000</li>
                         <li>3 sesiones semanales</li>
                         <li>12 sesiones mensuales</li>
-                        <li>Valor por sesión $12.500</li>
+                        <li>Valor por sesión $13.330</li>
                         <li>Sin plan $240.000</li>
-                        <li>Ahorra $90.000</li>
+                        <li>Ahorra $80.000</li>
                         <li><a href="#contact" class="btn btn-success btn-lg">CONSULTA</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3">
                     <ul class="price-table">
                         <li class="title">PLAN 3</li>
-                        <li class="price">$180.000</li>
+                        <li class="price">$190.000</li>
                         <li>4 sesiones semanales</li>
                         <li>16 sesiones mensuales</li>
-                        <li>Valor por sesión $11.250</li>
+                        <li>Valor por sesión $11.870</li>
                         <li>Sin plan $320.000</li>
-                        <li>Ahorra $140.000</li>
+                        <li>Ahorra $130.000</li>
                         <li><a href="#contact" class="btn btn-success btn-lg">CONSULTA</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3">
                     <ul class="price-table">
                         <li class="title">PLAN 4</li>
-                        <li class="price">$260.000</li>
+                        <li class="price">$270.000</li>
                         <li>6 sesiones semanales</li>
                         <li>24 sesiones mensuales</li>
-                        <li>Valor por sesión $10.833</li>
+                        <li>Valor por sesión $11.250</li>
                         <li>Sin plan $480.000</li>
-                        <li>Ahorra $220.000</li>
+                        <li>Ahorra $210.000</li>
                         <li><a href="#contact" class="btn btn-success btn-lg">CONSULTA</a></li>
                     </ul>
                 </div>
