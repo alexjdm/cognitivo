@@ -13,7 +13,7 @@
     </style>
 
 
-    <!--<div id="slides">
+    <div id="slides">
         <div class="slides-container">
             <img src="dist/images/bg1.png" alt="Curso de autismo." title="Curso sobre TEA" />
             <img src="dist/images/bg2.png" alt="Expresa tus sentimientos." title="Autismo" />
@@ -25,45 +25,9 @@
                 <i class="fa fa-angle-down"></i>
             </div>
         </div>
-    </div>-->
-
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <!--<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>-->
-        </ol>
-
-            <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-
-            <div class="item active">
-                <div class="background-nino" style=" height: 100vh;">
-                    <div class="col-md-7 col-sm-7 col-xs-12">
-                        <h4 class="tituloBannerH4">Nuevo taller para padres:</h4>
-                        <h1 class="tituloBannerH2">MANEJO DE CONDUCTAS INAPROPIADAS.</h1>
-                        <h3 class="tituloBannerH3">Santiago, Chile</h3>
-                        <h4 class="tituloBannerH5">¿Cómo manejo las conductas inapropiadas de mi hijo?</h4>
-                        <a class="btn btn-primary btnInscribir-curso1" href="taller-manejo-conductas-inapropiadas/">INSCRÍBETE</a>
-
-                        <div class="col-md-12 curso1-horarios">
-                            <p style="display: inline"><img src="dist/images/calendar.png" width="20px"> 01 de diciembre 2018</p>
-                            <p style="display: inline"><img src="dist/images/time.png" width="20px"> 10 - 12 hrs.</p>
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-5 col-sm-5 col-xs-12">
-                        <img src="dist/images/Curso11.png" class="" style="width:70%; margin-top: 18%;">
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
     </div>
+
+
 
 
 

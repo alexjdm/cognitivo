@@ -178,6 +178,17 @@ class blogController {
         require_once('views/layout.php');
     }
 
+    public function teapirotecnia() {
+        $this->pageTitle = 'TEA y Pirotecnia | Blog Cognitivo';
+        $this->pageDescription = "La fiesta de año nuevo es una instancia para compartir en familia y llenarnos de la emoción de comenzar un nuevo año junto a los que amamos. Sin embargo, muchas veces, al llegar las doce de la noche, la fiesta se transforma en un mal momento debido a la descompensación de nuestros niños con la pirotecnia.";
+        $this->pageKeywords = "terapia ocupacional, año nuevo, fuegos artificiales, pirotecnia, autismo, tea";
+        $this->page = 'views/blog/tea-pirotecnia.php';
+        $this->navbar = 'navbar-interior.php';
+        $this->navbarfooter = 'navbar-footer.php';
+
+        require_once('views/layout.php');
+    }
+
     public function error() {
         $this->pageTitle = 'Error | Librodeasistencia';
         $this->pageDescription = "librodeasistencia.com permite gestionar el reloj control de asistencia biométrico en forma online. Software 100% web.";

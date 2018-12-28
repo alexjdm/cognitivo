@@ -1,3 +1,4 @@
+<li><a href="blog/tea-pirotecnia/">TEA y Pirotecnia</a></li>
 <li><a href="blog/manejo-conductas-inapropiadas-de-mi-hijo/">¿Cómo manejo las conductas inapropiadas de mi hijo?</a></li>
 <li><a href="blog/habilidades-parentales/">Habilidades parentales</a></li>
 <li><a href="blog/ayuda-hijos-enfermedades-respiratorias/">¿Cómo ayudar a mi hijo con enfermedades respiratorias?</a></li>

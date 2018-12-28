@@ -83,7 +83,7 @@ $controllers = array(
     'blog' => ['index', 'cuantotiempousochupete', 'fenomenocausaefectobebe', 'aporteterapeutaocupacional', 'queeslapsicopedagogia',
         'queeslafonoaudiologia', 'tramitestea', 'integracionsensorial', 'juegoterapias', 'porquemihijonotoleraalimentos',
         'comomecomunicoconmihijosinohabla', 'desarrollohabilidadesyaprendizajesescolares', 'ayudahijosenfermedadesrespiratorias',
-        'habilidadesparentales', 'manejoconductasinapropiadasdemihijo',
+        'habilidadesparentales', 'manejoconductasinapropiadasdemihijo', 'teapirotecnia',
         'error'],
     'contact' => ['contactpage', 'ados', 'error'],
     'account' => ['login', 'logout', 'dologin', 'remember', 'rememberMail', 'error'],
