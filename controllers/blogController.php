@@ -189,6 +189,17 @@ class blogController {
         require_once('views/layout.php');
     }
 
+    public function mihijotienetea() {
+        $this->pageTitle = 'Charla sobre TEA | Blog Cognitivo';
+        $this->pageDescription = "Talleres y charlas para padres y cuidadores que permiten introducir a éstos con el diagnóstico del TEA.";
+        $this->pageKeywords = "talleres para padres y cuidadores, pirotecnia, autismo, tea";
+        $this->page = 'views/blog/mi-hijo-tiene-tea.php';
+        $this->navbar = 'navbar-interior.php';
+        $this->navbarfooter = 'navbar-footer.php';
+
+        require_once('views/layout.php');
+    }
+
     public function error() {
         $this->pageTitle = 'Error | Librodeasistencia';
         $this->pageDescription = "librodeasistencia.com permite gestionar el reloj control de asistencia biométrico en forma online. Software 100% web.";
