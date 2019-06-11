@@ -29,42 +29,42 @@
 
 
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                <!-- Indicators -->
-                                <ol class="carousel-indicators">
-                                    <!--<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                                    <li data-target="#myCarousel" data-slide-to="2"></li>-->
-                                </ol>
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <!--<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>-->
+            </ol>
 
             <!-- Wrapper for slides -->
-                                <div class="carousel-inner">
+            <div class="carousel-inner">
 
-                                    <div class="item active">
-                                        <div class="background-nino" style=" height: 100vh;">
-                                            <div class="col-md-7 col-sm-7 col-xs-12">
-                                                <h4 class="tituloBannerH4">Nuevo taller para padres:</h4>
-                                                <h1 class="tituloBannerH2">Juego: Estrategia de intervención para niños-jóvenes con autismo en casa.</h1>
-                                                <h3 class="tituloBannerH3">Santiago, Chile</h3>
-                                                <h4 class="tituloBannerH5">Mediante del juego podemos estimular el lenguaje del niño y otras habilidades relevantes para su desarrollo.</h4>
-                                                <a class="btn btn-primary btnInscribir-curso1" href="juego-estrategia-de-intervencion/">INSCRÍBETE</a>
+                <div class="item active">
+                    <div class="col-md-7 col-sm-7 col-xs-12 divizq-curso1">
+                        <h4 class="tituloBannerH4">Taller para Padres:</h4>
+                        <h1 class="tituloBannerH1" style="font-family: Dosis; font-size: 28pt;">INTEGRACIÓN SENSORIAL Y ALIMENTACIÓN</h1>
+                        <h4 class="tituloBannerH4" style="margin-top: 2%;">¡Cupos Limitados! No te lo pierdas</h4>
+                        <a class="btn btn-primary btnInscribir-curso1" href="curso-integracion-sensorial-alimentacion/">INSCRÍBETE</a>
 
-                                                <div class="col-md-12 curso1-horarios">
-                                                    <p style="display: inline"><img src="dist/images/calendar.png" width="20px"> 25 de mayo 2019</p>
-                                                    <p style="display: inline"><img src="dist/images/time.png" width="20px"> 15 - 17 hrs.</p>
-                                                </div>
+                        <div class="col-md-12 curso1-horarios">
+                            <p style="display: inline"><img src="dist/images/calendar.png" width="20px"> 22 junio 2019</p>
+                            <p style="display: inline"><img src="dist/images/time.png" width="20px"> 15 - 17 hrs.</p>
+                        </div>
 
-                                            </div>
+                    </div>
+                    <div class="col-md-5 col-sm-5 col-xs-12 back-curso non-display-responsive"></div>
+                    <div class="col-md-5 col-sm-5 col-xs-12 display-responsive" style="background-color: #FFFFFF">
+                        <center>
+                            <h3>Organiza:</h3>
+                            <img src="dist/images/logo-hor.png" width="100px">
+                        </center>
+                    </div>
+                </div>
 
-                                            <div class="col-md-5 col-sm-5 col-xs-12">
-                                                <img src="dist/images/Curso13.png" class="" style="width:70%; margin-top: 18%;">
-                                            </div>
-                                        </div>
-                                    </div>
+            </div>
 
-                                </div>
-
-                            </div>
+        </div>
 
 
 
@@ -122,8 +122,8 @@
                 <div class="col-md-8 col-md-offset-2">
                     <h2>Tratamiento Integral Terapéutico</h2>
                     <h5>ESTAMOS PARA AYUDARTE</h5>
-                    <p>Cognitivo es un centro de terapias donde trabajamos enfocados en la multidisciplina. Nos especializamos en niños y adolecentes con <b>Transtornos Generalizados del Desarrollo (TGD) del Espectro Autista (TEA)</b> así como otros transtornos no includos en dicho grupo.</p>
-                    <p>Contamos con Fonoaudiologas, Terapistas Ocupacionales, Psicologas, Psicopedagogas, Educadoras diferenciales y Kinesiólogas especializadas en el area infanto juvenil.</p>
+                    <p>Cognitivo es un centro de terapias donde trabajamos enfocados en la multidisciplina. Nos especializamos en niños y adolescentes con <b>Transtornos Generalizados del Desarrollo (TGD) del Espectro Autista (TEA)</b> así como otros trastornos no incluidos en dicho grupo.</p>
+                    <p>Contamos con Fonoaudiólogas, Terapistas Ocupacionales, Psicólogas, Psicopedagogas, Educadoras diferenciales y Kinesiólogas especializadas en el área infanto-juvenil.</p>
                 </div>
             </div>
 
@@ -163,7 +163,7 @@
                     </div>
                     <div>
                         <h3>Psicopedagogía</h3>
-                        <p>Evaluación, diagnostivo, tratamiento, estimulación cognitiva, técnicas y habitos de estudio. Dificultades de aprendizaje o trabajo preventivo con preescolares. Deterioro cognitivo en adultos mayores.</p>
+                        <p>Evaluación, diagnóstico, tratamiento, estimulación cognitiva, técnicas y hábitos de estudio. Dificultades de aprendizaje o trabajo preventivo con preescolares. Deterioro cognitivo en adultos mayores.</p>
                     </div>
                 </div>
                 <div class="col-sm-2">
@@ -172,7 +172,7 @@
                     </div>
                     <div>
                         <h3>Kinesiología</h3>
-                        <p>Neurológicos (Paralisis facial, Rehabilitación fisica, etc.), Traumatológicos (hombros, codo, tobillo, cadera, pie, etc.), lesiones deportivas, tratamientos respiratorios (niños y adultos), tratamiento del dolor.</p>
+                        <p>Neurológicos (Parálisis facial, Rehabilitación física, etc.), Traumatológicos (hombros, codo, tobillo, cadera, pie, etc.), lesiones deportivas, tratamientos respiratorios (niños y adultos), tratamiento del dolor.</p>
                     </div>
                 </div>
                 <div class="col-sm-1"></div>
@@ -195,10 +195,10 @@
             </div>
             <div class="row">
                 <div class="col-sm-6">
-                    <p>Ser un Centro Modelo a nivel comunal en la prestación de servicios de Diagnóstico, Intervención y Asesoría, con una amplia cobertura interdisciplinaria a través de profesionales especializados y destacados. </p>
+                    <p>Ser un centro modelo a nivel comunal en la prestación de servicios de diagnóstico, intervención y asesoría, con una amplia cobertura interdisciplinaria a través de profesionales especializados y destacados.</p>
                 </div>
                 <div class="col-sm-6">
-                    <p>Nuestros profesionales se caracterizan  por su calidad humana, su continua búsqueda hacia el crecimiento continuo y el uso de nuevas e innovadoras modalidades de atención que permite el desarrollo de habilidades de nuestros pacientes.  </p>
+                    <p>Nuestros profesionales se caracterizan por su calidad humana, su continua búsqueda hacia el crecimiento continuo y el uso de nuevas e innovadoras modalidades de atención que permite el desarrollo de habilidades de nuestros pacientes.</p>
                 </div>
             </div>
             <div class="row text-center">
@@ -242,7 +242,7 @@
                                 <p><img src="dist/images/estimulacion-temprana.jpg" alt="Taller de Estimulación Temprana" title="Estimulacion temprana" class="img-responsive" /></p>
                             </div>
                             <div class="col-sm-8">
-                                <p>La estimulación temprana ayuda a fortalecer el cuerpo y a desarrollar las emociones y la inteligencia de tu hijo o hija. Integra estas actividades a su juego diario. Abrázale, felicítale, sonríele, háblale y dile lo mucho que lo quieres, así, contribuirás a su desarrollo pleno y al cuidado de su salud</p>
+                                <p>La estimulación temprana ayuda a fortalecer el cuerpo y a desarrollar las emociones y la inteligencia de tu hijo o hija. Integra estas actividades a su juego diario. Abrázale, felicítale, sonríele, háblale y dile lo mucho que lo quieres, así, contribuirás a su desarrollo pleno y al cuidado de su salud.</p>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="Parentales">
@@ -353,7 +353,7 @@
 
     <!-- ========== MEMBERSHIP START ========== -->
 
-    <!--<section class="background background3 background-image" id="membership">
+    <section class="background background3 background-image" id="membership">
         <div class="container">
             <div class="row text-center">
                 <div class="col-sm-12">
@@ -418,7 +418,7 @@
                 </div>
             </div>
         </div>
-    </section>-->
+    </section>
 
     <!-- ========== MEMBERSHIP END ========== -->
 

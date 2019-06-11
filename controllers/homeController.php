@@ -12,6 +12,7 @@ class homeController {
     public $page = 'views/home/index.php';
     public $navbar = 'navbar.php';
     public $navbarfooter = 'navbar-footer.php';
+    public $isAdos = false;
 
     public function index() {
         $this->pageTitle = "Cognitivo Centro de Terapias";
@@ -19,7 +20,7 @@ class homeController {
         $this->page = 'views/home/index.php';
         $this->navbar = 'navbar.php';
         $this->navbarfooter = 'navbar-footer.php';
-        $this->pageKeywords = 'centro de autismo, TEA, Fonoaudiología,Psicología,Psicopedagogía,centro de Terapia Ocupacional, centro de Terapia Ocupacional para niños';
+        $this->pageKeywords = 'centro de autismo, asperger, TEA, centro de terapia ocupacional, fonoaudiología, psicología';
 
         $entradaBusiness = new Entrada();
         $entradas = $entradaBusiness->getAll();
@@ -34,6 +35,8 @@ class homeController {
         $this->page = 'views/home/ados.php';
         $this->navbar = 'navbar-interior.php';
         $this->navbarfooter = 'navbar-footer.php';
+
+        $this->isAdos = true;
 
         require_once('views/layout.php');
     }
@@ -365,7 +368,7 @@ EOF;
         $nombreBanco 	= $_POST['nombreBanco'];
 
         $precio		= 10000;
-        $idCurso	= 5;
+        $idCurso	= 14;
 
         if (!filter_var($_REQUEST['email'], FILTER_VALIDATE_EMAIL)) {
             header('Location: index.php?invalid=true');
@@ -443,9 +446,9 @@ EOF;
         fwrite($fh, $line);
 
         if ($transaction_id == 'demo-js-transaction-1' && $response == 'VERIFIED' && $receiver_id == $my_receiver_id) {
-            $headers = 'From: "Curso Cognitivo" <no-responder@khipu.com>' . "\r\n";
+            $headers = 'From: "Taller Cognitivo" <no-responder@khipu.com>' . "\r\n";
             $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-            $subject = 'Pago exitoso Curso Cognitivo';
+            $subject = 'Pago exitoso taller Cognitivo';
             $body = <<<EOF
 Hola<br/>
 <br/>
